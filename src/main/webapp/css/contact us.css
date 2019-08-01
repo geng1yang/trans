@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*联系我们-开始*/
+.contact {
+	width: 1000px;
+	height: 400px;
+	margin: 20px auto;
+	font-size: 14px;
+}
+.contact .liuyan{ width:998px; border:1px solid #CCC; height:600px; margin:20px 0; overflow:hidden;}
+.contact .liuyan li{ border-bottom:1px solid #ddd;}
+.contact .liuyan li{ padding:10px;}
+.contact .liuyan p{ height:25px; line-height:25px;}
+.answer{ margin-top:20px; background:#eaeaea; margin-top:10px;}
+.ye{ text-align:center; margin-bottom:40px;}
+.ye span{ width:50px; border:1px solid #ccc; margin:0 10px; padding:3px 10px; cursor:pointer;}
+.contact .left {
+	float: left;
+	width: 550px;
+	height: 400px;
+}
+.left p {
+	height: 25px;
+	line-height: 25px;
+	margin-bottom: 25px;
+}
+.contact-us {
+	font-size: 16px;
+	font-weight: bolder;
+}
+.left p span {
+	font-weight: bold;
+}
+.contact .right {
+	float: right;
+	width: 400px;
+	height: 400px;
+}
+.tab_div_ul>li {
+	height: 56px;
+}
+textarea {
+	border: 1px solid #CCC;
+	padding: 5px;
+	width: 390px;
+}
+.tab_div_ul .list_div {
+	float: left;
+	padding-top: 10px;
+	margin-right: 20px;
+}
+.tab_div_ul input {
+	border: 1px solid #ccc;
+	height: 35px;
+	line-height: 35px;
+	width: 390px;
+	padding: 0 5px;
+	color: #000;
+	outline: none;
+}
+#tijiao {
+	width: 80px;
+	margin-top: 20px;
+	float: right;
+	background: #F48B2B;
+	height: 32px;
+	line-height: 32px;
+	font-size: 14px;
+	text-align: center;
+	color: #FFF;
+	border-radius: 5px;
+	border: none;
+	cursor: pointer;
+}
+#tijiao:hover {
+	background: #D36A0A;
+}
+/*联系我们-结束*/

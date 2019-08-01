@@ -1,0 +1,138 @@
+@charset "utf-8";
+/* CSS Document */
+
+/**********************内容-开始**********************/
+.big_box {
+	width: 100%;
+	overflow: hidden;
+}
+.advert {
+	width: 1000px;
+	height: 83px;
+	margin: 0 auto 10px;
+}
+.main {
+	width: 1000px;
+	margin: 0 auto;
+	font-size: 16px;
+}
+/*货运信息*/
+.main .first-floor {
+	width: 998px;
+	height: 400px;
+	background: #fff;
+	border: 1px solid #ccc;
+}
+.first-floor td {
+	font-size: 14px;
+	line-height: 30px;
+	background-color: #fcfcfc;
+	text-align: center;
+	border-bottom: 1px solid #f1f1f1;
+}
+.first-floor td span {
+	color: #fff;
+	display: block;
+	padding: 0 3px;
+	line-height: 30px;
+	background: #50B1E3;
+	border-radius: 5px;
+	margin: 0 16px 0 10px;
+}
+.first-floor span a{ color:#fff;}
+.main .second-floor {
+	width: 1000px;
+	height: 220px;
+	margin-top: 10px;
+}
+.main .second-floor .reader-driver {
+	width: 480px;
+	height: 220px;
+	float: left;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+.main .second-floor .reader-driver ul {
+	width: 94.5px;
+}
+.reader-driver p img {
+	width: 99px;
+	float: left;
+}
+.main .second-floor ul {
+	width: 126px;
+	height: 98px;
+	float: left;
+}
+.main .second-floor ul li {
+	text-align: center;
+	height: 1px;
+	margin-top: 70px;
+}
+.main .second-floor .line-interaction {
+	width: 480px;
+	height: 220px;
+	float: left;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	float: right;
+}
+.line-interaction p img {
+	width: 99px;
+	float: left;
+}
+.list_more {
+	width: 80px;
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid #F5841C;
+	font-size: 14px;
+	text-align: center;
+	background-color: #F5841C;
+	margin-top: 10px;
+	border-radius: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	cursor: pointer;
+}
+.list_more a{color:#fff;}
+/*地图-开始*/
+.map {
+	margin: 0 auto;
+	width: 998px;
+	height: 500px;
+	border: 1px solid #ccc;
+	margin-top: 10px;
+}
+/*地图-结束*/
+/*广告*/
+.gg {
+	margin: 0 auto;
+	margin-top: 10px;
+	width: 1000px;
+}
+/*联系我们*/
+.content_four {
+	width: 998px;
+	margin: 0 auto;
+	height: 198px;
+	margin-top: 20px;
+	border: 1px solid #ccc;
+}
+.content_four img {
+	float: left;
+}
+.us {
+	float: left;
+	width: 848px;
+	height: 198px;
+	background: #fff;
+}
+.us p {
+	width: 500px;
+	height: 140px;
+	font-size: 14px;
+	line-height: 30px;
+	margin: 40px 0 40px 40px;
+}
+/**********************内容-结束**********************/
