@@ -1,0 +1,303 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>新广货运联盟-首页</title>
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/main.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#main_nav').allenMenu();
+		$('#slide').allenSlide();
+		//$('a[name=need_lightbox]').lightBox();
+	});
+</script>
+<!--登录注册-开始-->
+<script src="js/jquery.XYTipsWindow.min.2.8.js"></script>
+<script type="text/javascript">
+ $(document).ready(function() {
+	$("#login").click(function(){
+		$.XYTipsWindow({
+			___title:"会员登录",
+			___content:"iframe:login.html",
+			___width:"480",
+			___height:"180",
+			___showbg:true,
+			___drag:"___boxTitle"
+
+		});
+	});
+	
+	$("#reg").click(function(){
+		$.XYTipsWindow({
+			___title:"会员注册",
+			___content:"iframe:reg.html",
+			___width:"460",
+			___height:"450",
+			___showbg:true,
+			___drag:"___boxTitle"
+		});
+	});
+ })
+</script>
+<!--登录注册-结束-->
+
+</head>
+<body>
+<!--top开始-->
+<div class="top_box">
+    <div class="top">
+        <p class="top_left">您好，欢迎来到新广货运联盟！</p>
+        <div class="top_right">
+        	<a href="alliance%20profile.html" target="_blank">欢迎加盟</a>
+            <!--登录-->
+            <div class="box">
+                <div class="demo">
+                	<button style="display:none"><a href="modify%20data.html" target="_blank">su23c0e</a></button>
+                    <button style="display:none">退出</button>
+                    <button id="login">登录</button>
+					<button id="reg">注册</button>
+                </div>
+            </div>          
+        </div>	
+    </div> 
+</div>
+<!--top结束--> 
+
+<!--LOGO部分开始-->
+<div class="small_box">
+    <div class="small">
+    <img src="images/logo.png" class="logo">
+        <div class="small_right">
+            <div class="info"><a href="freight%20information.html" target="_blank">货运信息发布</a></div>
+        </div>
+    </div>
+</div>
+<!--LOGO部分结束--> 
+
+<!--nav导航开始-->
+<div id="wrap">
+	<div id="main_nav">
+		<ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="alliance%20profile.html" target="_blank">联盟简介</a></li>
+            <li><a href="">货运信息</a>
+                <ul>
+                    <li><a href="freight%20details.html" target="_blank">货源信息</a></li>
+                    <li><a href="freight%20details.html" target="_blank">车源信息</a></li>
+                    <li><a href="freight%20map.html" target="_blank">货运地图</a></li>
+                </ul>
+            </li>
+            <li><a href="">司机读本</a>
+                <ul>
+                    <li><a href="driving%20knowledge.html" target="_blank">驾驶常识</a></li>
+                    <li><a href="driving%20knowledge.html" target="_blank">政策法规</a></li>
+                    <li><a href="driving%20knowledge.html" target="_blank">卡车评估</a></li>
+                    <li><a href="driving%20knowledge.html" target="_blank">修车指导</a></li>
+                </ul>
+            </li>
+            <li><a href="">行内互动</a>
+                <ul>
+                    <li><a href="line%20interaction.html" target="_blank">驾照分数</a></li>
+                    <li><a href="line%20interaction.html" target="_blank">车辆交易</a></li>
+                    <li><a href="line%20interaction.html" target="_blank">招聘信息</a></li>
+                </ul>
+            </li>
+            <li><a href="contact%20us.html" target="_blank">联系我们</a></li>
+		</ul>		
+	</div>
+	<div class="clear"></div>
+</div>	
+
+<!--内容content-->
+<div class="big_box">
+    <!--广告-->
+    <div class="advert"><a href="" target="_blank"><img src="images/ggt_03.png"></a></div>
+    <!--主要内容-->
+    <div class="main">
+    	<!--货运信息发布-->
+   		<div class="first-floor">
+            <img src="images/tt_07.png" style="float:left;">
+            <table width="899" border="0" cellpadding="0" cellspacing="0" style="float:left;">
+                <tbody>
+                    <tr>
+                        <td style=" width:120px; background-color:#ebebeb">出发地 </td>
+                        <td style=" width:120px; background-color:#ebebeb">到达地</td>
+                        <td style=" width:399px; background-color:#ebebeb">货物描述</td>
+                        <td style=" width:150px; background-color:#ebebeb">意向价格</td>
+                        <td style=" width:100px; background-color:#ebebeb">发布时间</td>
+                        <td style=" width:140px; background-color:#ebebeb">状态</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div style=" height:369px; overflow:hidden; float:left;">
+                <table width="899" border="0" cellspacing="0" cellpadding="0" id="demo1">
+                    <tbody>
+                        <tr>
+                            <td width="100">南昌市</td>
+                            <td width="100">赣州市</td>
+                            <td width="299">化肥</td>
+                            <td width="100">价格面议</td>
+                            <td width="100">17秒前</td>
+                            <td width="100"><span><a href="freight%20details.html" target="_blank">查看</a></span></td>
+                        </tr>
+                        <tr>
+                            <td width="110">菏泽市</td>
+                            <td width="110">菏泽市</td>
+                            <td>纸箱</td>
+                            <td width="80">价格面议</td>
+                            <td width="110">21秒前</td>
+                            <td width="100"><span><a href="freight%20details.html" target="_blank">查看</a></span></td>
+                        </tr>
+                        <tr>
+                            <td width="110">咸宁市</td>
+                            <td width="110">郑州市</td>
+                            <td>菜</td>
+                            <td width="80">价格面议</td>
+                            <td width="110">27秒前</td>
+                            <td width="100"><span><a href="freight%20details.html" target="_blank">查看</a></span></td>
+                        </tr>
+                        <tr>
+                            <td width="110">菏泽市</td>
+                            <td width="110">咸宁市</td>
+                            <td>酒盒</td>
+                            <td width="80">价格面议</td>
+                            <td width="110">45秒前</td>
+                            <td width="100"><span><a href="freight%20details.html" target="_blank">查看</a></span></td>
+                        </tr>
+                        <tr>
+                            <td width="110">咸宁市</td>
+                            <td width="110">菏泽市</td>
+                            <td>菜</td>
+                            <td width="80">价格面议</td>
+                            <td width="110">47秒前</td>
+                            <td width="100"><span><a href="freight%20details.html" target="_blank">查看</a></span></td>
+                        </tr>
+                        <tr>
+                            <td width="110">咸宁市</td>
+                            <td width="110">洛阳市</td>
+                            <td>扫帚</td>
+                            <td width="80">价格面议</td>
+                            <td width="110">57秒前</td>
+                            <td width="100"><span><a href="freight%20details.html" target="_blank">查看</a></span></td>
+                        </tr>
+                        <tr>
+                            <td width="110">南京市</td>
+                            <td width="110">安庆市</td>
+                            <td>树苗</td>
+                            <td width="80">价格面议</td>
+                            <td width="110">1分钟前</td>
+                            <td width="100"><span><a href="freight%20details.html" target="_blank">查看</a></span></td>
+                        </tr>
+                        <tr>
+                            <td width="110">菏泽市</td>
+                            <td width="110">驻马店市</td>
+                            <td>板材30吨</td>
+                            <td width="80">价格面议</td>
+                            <td width="110">1分钟前</td>
+                            <td width="100"><span><a href="freight%20details.html" target="_blank">查看</a></span></td>
+                        </tr>
+                        <tr>
+                            <td width="110">咸宁市</td>
+                            <td width="110">郑州市</td>
+                            <td>棉纱</td>
+                            <td width="80">价格面议</td>
+                            <td width="110">1分钟前</td>
+                            <td width="100"><span><a href="freight%20details.html" target="_blank">查看</a></span></td>
+                        </tr>
+                        <tr>
+                            <td width="110">咸宁市</td>
+                            <td width="110">石家庄市</td>
+                            <td>棉纱</td>
+                            <td width="80">价格面议</td>
+                            <td width="110">1分钟前</td>
+                            <td width="100"><span><a href="freight%20details.html" target="_blank">查看</a></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="list_more" id="getmore1"><a href="freight%20details.html" target="_blank">更多»</a></div>
+            </div>
+        </div>
+        <!--地图-开始-->
+<!--        <div style="margin:0 auto; width:998px; height:500px; border:1px solid #ccc; margin-top:10px;">-->
+<!--        	-->
+<!--        </div>-->
+        <!--地图-结束-->
+        <div class="second-floor">
+        	<div class="reader-driver"><!--司机读本-->
+            	<p><img src="images/tu_07.png"></p>
+                <ul>
+                	<li><a href="driving%20knowledge.html" target="_blank"><img src="images/tubiao_03.png"></a></li>
+                    <li><a href="driving%20knowledge.html" target="_blank">驾驶常识</a></li>
+                </ul>
+                <ul>
+                	<li><a href="driving%20knowledge.html" target="_blank"><img src="images/tubiao_09.png"></a></li>
+                    <li><a href="driving%20knowledge.html" target="_blank">政策法规</a></li>
+                </ul>
+                <ul>
+                	<li><a href="driving%20knowledge.html" target="_blank"><img src="images/trucks.png"></a></li>
+                    <li><a href="driving%20knowledge.html" target="_blank">卡车评估</a></li>
+                </ul>
+                <ul>
+                	<li><a href="driving%20knowledge.html" target="_blank"><img src="images/06.png"></a></li>
+                    <li><a href="driving%20knowledge.html" target="_blank">修车指导</a></li>
+                </ul>
+            </div>
+            <div class="line-interaction"><!--行内互动-->
+            	<p><img src="images/tr_03.png"></p>
+                <ul>
+                	<li><a href="line%20interaction.html" target="_blank"><img src="images/ttubiao_08.png"></a></li>
+                    <li><a href="line%20interaction.html" target="_blank">驾照分数</a></li>
+                </ul>
+                <ul>
+                	<li><a href="line%20interaction.html" target="_blank"><img src="images/ttubiao_10.png"></a></li>
+                    <li><a href="line%20interaction.html" target="_blank">车辆交易</a></li>
+                </ul>
+                <ul>
+                	<li><a href="line%20interaction.html" target="_blank"><img src="images/ttubiao_12.png"></a></li>
+                    <li><a href="line%20interaction.html" target="_blank">招聘信息</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--广告-开始-->
+<div class="gg">
+	<a href="" target="_blank"><img src="images/gg_03.jpg" alt="广告图片"></a>
+</div>
+<!--广告-结束-->
+
+<!--尾部-开始-->
+<div class="footer">
+    <div class="footer_div">
+        <div class="footer_left">
+            <p class="footer_tit">友情链接</p>
+            <ul>
+                <li><a href="" target="_blank">中国物流网</a></li>
+                <li><a href="" target="_blank">全国物流信息网</a></li>
+                <li><a href="" target="_blank">申通物流</a></li>
+            </ul>
+        </div>
+        <div class="footer_center">
+            <p class="footer_tit">新广货运联盟</p>
+            <p class="footer_p">新广货运联盟提供创新的互联网物流技术与服务，打造新一代物流电商平台。</p>
+            <p class="footer_p">新广货运联盟平台拥有“第一物流”品牌，通过电脑版、手机网站、手机APP、微信平台产品，实现人与货，人与人之间的连接。通过大数据智能分析，帮助不同客户自由定制物流模式，进化效率，享受科技进步带来的乐趣。</p>
+        </div>
+        <div class="footer_right">
+            <p><a href="alliance%20profile.html" target="_blank">加盟我们</a>｜<a href="contact%20us.html" target="_blank">联系我们</a></p>
+            <div class="info">
+                <p><span>咨询电话：</span>400-xxxxxxxx 182XXXXXXXX</p>
+                <p><span>邮箱：</span>xinguanghuoyun@163.com</p>
+                <p><span>地址：</span>河南省郑州市金水区文化路9号永和国际大厦</p>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="footer_bottom">Copyright © 2012-2015 新广货运联盟 版权所有 Power by www.dwuliu.com   ICP备14059919号-1号 </div>
+</div>
+<!--尾部-结束--> 
+</body>
+</html>

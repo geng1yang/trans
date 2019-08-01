@@ -1,0 +1,504 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-size: 12px;
+	font-family: "宋体";
+	color: #666;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: #333;
+	cursor: pointer;
+}
+a:hover {
+	text-decoration: none;
+	color: red;
+}
+img {
+	border: 0;
+}
+/*top开始*/
+.top_box {
+	width: 100%;
+	height: 30px;
+	background: #eeeff1;
+	position: fixed;
+	z-index: 10;
+}
+.top {
+	width: 1000px;
+	height: auto;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.top_left {
+	width: 200px;
+	line-height: 30px;
+	float: left;
+	color: #666666;
+}
+.top_right {
+	width: 330px;
+	line-height: 30px;
+	float: right;
+	color: #666666;
+}
+.top_right a {
+	color: #666666;
+	float: left;
+	margin-left: 120px;
+	text-decoration: none;
+}
+.top_right a:hover {
+	color: red;
+}
+.demo {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+.demo button {
+	margin: 0 5px 20px;
+	border: none;
+	font-size: 12px;
+	color: #666;
+}
+.box {
+	width: 100px;
+	float: right;
+}
+.demo button:hover {
+	cursor: pointer;
+	color: red;
+}
+/*登录注册-开始*/
+.XYTipsWindow .boxLoading {
+	position: absolute;
+	display: block;
+	width: 90px;
+	height: 30px;
+	line-height: 30px;
+	margin-left: -45px;
+	margin-top: -15px;
+	left: 50%;
+	top: 50%;
+	color: #f00;
+}
+.XYTipsWindow .boxLoading {
+	width: 28px;
+	margin-left: -14px;
+	background: url("../images/loading.gif") no-repeat;
+	text-indent: -999em;
+	text-align: center;
+}
+.XYTipsWindow .boxTitle, .XYTipsWindow .boxTitle span, .XYTipsWindow .boxTitle span.hover, .XYTipsWindow .loadinglayer, .XYTipsWindow .tipslayer, .XYTipsWindow .arrowLeft, .XYTipsWindow .colseBtn, .XYTipsWindow .boxError em, .XYTipsWindow .dialogBtn, .XYTipsWindow .dialogBtn.hover {
+	background-image: url("../images/ico.png");
+	background-repeat: no-repeat;
+}
+.XYTipsWindow .boxTitle {
+	position: relative;
+	border: 1px solid #A6C9E1;
+	border-bottom: none;
+	background-position: 0 0;
+	background-repeat: repeat-x;
+	height: 30px;
+	line-height: 30px;
+}
+.XYTipsWindow .boxTitle h3 {
+	float: left;
+	font-weight: normal;
+	color: #666;
+	font-size: 14px;
+	margin: 0;
+	text-indent: 10px;
+}
+.XYTipsWindow .boxTitle span {
+	position: absolute;
+	width: 10px;
+	background-position: -80px -40px;
+	text-indent: -10em;
+	right: 10px;
+	top: 10px;
+	height: 16px;
+	overflow: hidden;
+	cursor: pointer;
+}
+.XYTipsWindow .boxTitle span.hover {
+	background-position: -90px -40px;
+}
+.XYTipsWindow .loadinglayer {
+	line-height: 40px;
+	background-position: 0 -100px!important;
+}
+.XYTipsWindow .tipslayer {
+	line-height: 20px;
+	text-align: left;
+}
+.XYTipsWindow .arrowLeft {
+	position: absolute;
+	width: 8px;
+	height: 16px;
+	background-position: -20px -170px;
+	text-indent: -9999em;
+	z-index: 20591;
+	overflow: hidden;
+}
+.XYTipsWindow .colseBtn {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 8px;
+	height: 8px;
+	background-position: -55px -170px;
+	text-indent: -9999em;
+	cursor: pointer;
+	z-index: 20591;
+	overflow: hidden;
+}
+.XYTipsWindow .boxError {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -60px;
+	margin-top: -15px;
+	width: 120px;
+	height: 30px;
+	line-height: 30px;
+	color: #f00;
+}
+.XYTipsWindow .boxError em {
+	float: left;
+	width: 30px;
+	height: 30px;
+	background-position: -35px -140px;
+}
+.XYTipsWindow .dialogBtn {
+	margin: 5px 5px 0 0;
+	width: 80px;
+	height: 35px;
+	background-position: 0 -30px;
+	border: none;
+	color: #333;
+}
+.XYTipsWindow .dialogBtn.hover {
+	background-position: 0 -65px;
+}
+.XYTipsWindow.shadow {
+	box-shadow: 2px 2px 5px #C0BBB5;
+	-moz-box-shadow: 2px 2px 5px #C0BBB5;
+	-webkit-box-shadow: 2px 2px 5px #C0BBB5;
+}
+.XYTipsWindow .boxLoading {
+	position: absolute;
+	display: block;
+	width: 90px;
+	height: 30px;
+	line-height: 30px;
+	margin-left: -45px;
+	margin-top: -15px;
+	left: 50%;
+	top: 50%;
+	color: #f00;
+}
+.XYTipsWindow .boxLoading {
+	width: 28px;
+	margin-left: -14px;
+	background: url("../images/loading.gif") no-repeat;
+	text-indent: -999em;
+	text-align: center;
+}
+.XYTipsWindow .boxTitle, .XYTipsWindow .boxTitle span, .XYTipsWindow .boxTitle span.hover, .XYTipsWindow .loadinglayer, .XYTipsWindow .tipslayer, .XYTipsWindow .arrowLeft, .XYTipsWindow .colseBtn, .XYTipsWindow .boxError em, .XYTipsWindow .dialogBtn, .XYTipsWindow .dialogBtn.hover {
+	background-image: url("../images/ico.png");
+	background-repeat: no-repeat;
+}
+.XYTipsWindow .boxTitle {
+	position: relative;
+	border: 1px solid #A6C9E1;
+	border-bottom: none;
+	background-position: 0 0;
+	background-repeat: repeat-x;
+	height: 30px;
+	line-height: 30px;
+}
+.XYTipsWindow .boxTitle h3 {
+	float: left;
+	font-weight: normal;
+	color: #666;
+	font-size: 14px;
+	margin: 0;
+	text-indent: 10px;
+}
+.XYTipsWindow .boxTitle span {
+	position: absolute;
+	width: 10px;
+	background-position: -80px -40px;
+	text-indent: -10em;
+	right: 10px;
+	top: 10px;
+	height: 16px;
+	overflow: hidden;
+	cursor: pointer;
+}
+.XYTipsWindow .boxTitle span.hover {
+	background-position: -90px -40px;
+}
+.XYTipsWindow .loadinglayer {
+	line-height: 40px;
+	background-position: 0 -100px!important;
+}
+.XYTipsWindow .tipslayer {
+	line-height: 20px;
+	text-align: left;
+}
+.XYTipsWindow .arrowLeft {
+	position: absolute;
+	width: 8px;
+	height: 16px;
+	background-position: -20px -170px;
+	text-indent: -9999em;
+	z-index: 20591;
+	overflow: hidden;
+}
+.XYTipsWindow .colseBtn {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 8px;
+	height: 8px;
+	background-position: -55px -170px;
+	text-indent: -9999em;
+	cursor: pointer;
+	z-index: 20591;
+	overflow: hidden;
+}
+.XYTipsWindow .boxError {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -60px;
+	margin-top: -15px;
+	width: 120px;
+	height: 30px;
+	line-height: 30px;
+	color: #f00;
+}
+.XYTipsWindow .boxError em {
+	float: left;
+	width: 30px;
+	height: 30px;
+	background-position: -35px -140px;
+}
+.XYTipsWindow .dialogBtn {
+	margin: 5px 5px 0 0;
+	width: 80px;
+	height: 35px;
+	background-position: 0 -30px;
+	border: none;
+	color: #333;
+}
+.XYTipsWindow .dialogBtn.hover {
+	background-position: 0 -65px;
+}
+.XYTipsWindow.shadow {
+	box-shadow: 2px 2px 5px #C0BBB5;
+	-moz-box-shadow: 2px 2px 5px #C0BBB5;
+	-webkit-box-shadow: 2px 2px 5px #C0BBB5;
+}
+/*登录注册-结束*/
+
+/*logo部分*/
+.small_box {
+	width: 100%;
+	height: 120px;
+	background: #fff;
+	padding-top: 30px;
+}
+.small {
+	width: 1000px;
+	height: auto;
+	margin: 0 auto;
+}
+.logo {
+	width: 100px;
+	height: 120px;
+	float: left;
+}
+.small_right {
+	float: left;
+	width: 760px;
+	height: 120px;
+	margin-left: 140px;
+}
+.info a {
+	float: right;
+	width: 150px;
+	height: 45px;
+	background: #F5841C;
+	border-radius: 5px;
+	margin-top: 40px;
+	color: #fff;
+	line-height: 45px;
+	font-size: 16px;
+	font-family: "微软雅黑";
+	margin-right: 40px;
+	text-decoration: none;
+	text-align: center;
+}
+.info a:hover {
+	background: #D36A0A;
+}
+.info input:focus {
+	border: none;
+}
+/*导航-开始*/
+#wrap {
+	margin: 10px auto 0;
+	width: 100%;
+	height: 60px;
+	background: url(../images/nav_bg.png) repeat-x top left;
+}
+#main_nav ul {
+	font-size: 13px;
+	list-style: none;
+}
+#main_nav {
+	height: 60px;
+	overflow: visible;
+	margin: 0 auto;
+	width: 1000px;
+}
+#main_nav li {
+	float: left;
+	position: relative;
+	z-index: 5;
+}
+#main_nav li a {
+	color: #fff;
+	display: block;
+	width: 166.5px;
+	height: 45px;
+	text-decoration: none;
+	line-height: 45px;
+	text-align: center;
+	margin-top: 2px;
+}
+#main_nav li ul li a {
+	font-size: 12px;
+	width: 164.5px;
+	height: 40px;
+	line-height: 40px;
+	margin: 0px;
+}
+#main_nav li ul li a:hover, #main_nav li.focus ul li a:hover {
+	background: #fe7210;
+}
+#main_nav li.focus a, #main_nav li a:hover {
+	background: url(../images/nav_over.png) no-repeat top left;
+}
+#main_nav li.focus ul li a {
+	background: none;
+}
+#main_nav li ul {
+	position: absolute;
+	top: 46px;
+	left: 0px;
+	background: #fd9342;
+	border-color: #de813b;
+	border-style: none solid solid;
+	border-width: medium 1px 1px;
+	display: none;
+}
+#main_nav li ul li {
+	float: none;
+}
+/*导航-结束*
+
+/*尾部-开始*/
+.footer {
+	width: 100%;
+	height: 300px;
+	margin: 0 auto;
+	color: #fff;
+	font-size: 14px;
+	background: #525252;
+	clear: both;
+}
+.footer_div {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 25px 0;
+}
+.footer_tit {
+	line-height: 40px;
+	border-bottom: 1px solid #fff;
+}
+.footer_left {
+	float: left;
+	width: 250px;
+}
+.footer_left ul {
+	margin-top: 15px;
+}
+.footer_left ul li {
+	height: 30px;
+	width: 125px;
+	float: left;
+	text-align: left;
+	font-size: 12px;
+	line-height: 30px;
+}
+.clear {
+	clear: both;
+}
+.footer_left ul li span {
+	display: block;
+}
+.footer_left ul li a {
+	color: #fff;
+}
+.footer_center {
+	float: left;
+	width: 398px;
+	margin: 0 50px;
+}
+.footer_p {
+	line-height: 22px;
+	margin-top: 15px;
+	margin-bottom: 6px;
+	font-size: 12px;
+}
+.footer_right {
+	float: left;
+	width: 252px;
+}
+.footer_right p {
+	color: #fff;
+	font-size: 14px;
+	line-height: 40px;
+	text-align: left;
+}
+.footer_right p a {
+	color: #fff;
+}
+.footer_right .info p {
+	height: 25px;
+	line-height: 25px;
+	margin-bottom: 0;
+}
+.footer_bottom {
+	color: #4d4d4d;
+	font-size: 12px;
+	line-height: 40px;
+	text-align: center;
+	background: #e6e6e6;
+	clear: both;
+}
+/*尾部-结束*/
+

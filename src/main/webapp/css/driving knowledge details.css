@@ -1,0 +1,714 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	padding: 0;
+	margin: 0 auto;
+}
+body {
+	font-size: 12px;
+	font-family: "宋体";
+	color: #666;
+}
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: #333;
+	cursor: pointer;
+}
+a:hover {
+	text-decoration: none;
+	color: red;
+}
+img {
+	border: 0;
+}
+/*top开始*/
+.top_box {
+	width: 100%;
+	height: 30px;
+	background: #eeeff1;
+	position: fixed;
+	z-index: 10;
+}
+.top {
+	width: 1000px;
+	height: auto;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.top_left {
+	width: 200px;
+	line-height: 30px;
+	float: left;
+	color: #666666;
+}
+.top_right {
+	width: 330px;
+	line-height: 30px;
+	float: right;
+	color: #666666;
+}
+.top_right a {
+	color: #666666;
+	float: left;
+	margin-left: 120px;
+	text-decoration: none;
+}
+.top_right a:hover {
+	color: red;
+}
+.demo {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+.demo a {
+	margin: 0 5px 20px;
+}
+/*-------登录注册-------*/
+#wrapper img {
+	max-width: 100%;
+	height: auto;
+	width: auto;
+	-ms-interpolation-mode: bicubic;
+	vertical-align: middle;
+}
+#wrapper a, button, input {
+	-webkit-tap-highlight-color: rgba(255,0,0,0)
+}
+#wrapper input {
+	border: 0 none;
+	-webkit-appearance: none
+}
+#wrapper ul, p {
+	padding: 0;
+	margin: 0
+}
+#wrapper a {
+	color: #666
+}
+#wrapper a, a:hover {
+	text-decoration: none
+}
+#wrapper a:focus {
+	outline: none
+}
+.animated, .animated1 {
+	-webkit-animation-duration: 1.4s;
+	animation-duration: 1.4s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both
+}
+ @-webkit-keyframes bounceIn {
+ 0% {
+ opacity:0;
+ -webkit-transform:scale(.3);
+ transform:scale(.3)
+}
+50% {
+ opacity:1;
+ -webkit-transform:scale(1.05);
+ transform:scale(1.05)
+}
+70% {
+ -webkit-transform:scale(.9);
+ transform:scale(.9)
+}
+100% {
+ opacity:1;
+ -webkit-transform:scale(1);
+ transform:scale(1)
+}
+}
+@keyframes bounceIn {
+ 0% {
+ opacity:0;
+ -webkit-transform:scale(.3);
+ -ms-transform:scale(.3);
+ transform:scale(.3)
+}
+50% {
+ opacity:1;
+ -webkit-transform:scale(1.05);
+ -ms-transform:scale(1.05);
+ transform:scale(1.05)
+}
+70% {
+ -webkit-transform:scale(.9);
+ -ms-transform:scale(.9);
+ transform:scale(.9)
+}
+100% {
+ opacity:1;
+ -webkit-transform:scale(1);
+ -ms-transform:scale(1);
+ transform:scale(1)
+}
+}
+.bounceIn {
+	-webkit-animation-name: bounceIn;
+	animation-name: bounceIn
+}
+ @-webkit-keyframes bounceInDown {
+ 0% {
+ opacity: 0;
+ -webkit-transform: translateY(-2000px);
+ transform: translateY(-2000px);
+}
+ 60% {
+ opacity: 1;
+ -webkit-transform: translateY(30px);
+ transform: translateY(30px);
+}
+ 80% {
+ -webkit-transform: translateY(-10px);
+ transform: translateY(-10px);
+}
+ 100% {
+ -webkit-transform: translateY(0);
+ transform: translateY(0);
+}
+}
+ @keyframes bounceInDown {
+ 0% {
+ opacity: 0;
+ -webkit-transform: translateY(-2000px);
+ -ms-transform: translateY(-2000px);
+ transform: translateY(-2000px);
+}
+ 60% {
+ opacity: 1;
+ -webkit-transform: translateY(30px);
+ -ms-transform: translateY(30px);
+ transform: translateY(30px);
+}
+ 80% {
+ -webkit-transform: translateY(-10px);
+ -ms-transform: translateY(-10px);
+ transform: translateY(-10px);
+}
+ 100% {
+ -webkit-transform: translateY(0);
+ -ms-transform: translateY(0);
+ transform: translateY(0);
+}
+}
+.bounceInDown {
+	-webkit-animation-name: bounceInDown;
+	animation-name: bounceInDown;
+}
+ @-webkit-keyframes bounceOutUp {
+ 0% {
+ -webkit-transform: translateY(0);
+ transform: translateY(0);
+}
+ 20% {
+ opacity: 1;
+ -webkit-transform: translateY(20px);
+ transform: translateY(20px);
+}
+ 100% {
+ opacity: 0;
+ -webkit-transform: translateY(-2000px);
+ transform: translateY(-2000px);
+}
+}
+ @keyframes bounceOutUp {
+ 0% {
+ -webkit-transform: translateY(0);
+ -ms-transform: translateY(0);
+ transform: translateY(0);
+}
+ 20% {
+ opacity: 1;
+ -webkit-transform: translateY(20px);
+ -ms-transform: translateY(20px);
+ transform: translateY(20px);
+}
+ 100% {
+ opacity: 0;
+ -webkit-transform: translateY(-2000px);
+ -ms-transform: translateY(-2000px);
+ transform: translateY(-2000px);
+}
+}
+.bounceOutUp {
+	-webkit-animation-name: bounceOutUp;
+	animation-name: bounceOutUp;
+}
+ @-webkit-keyframes rollIn {
+ 0% {
+ opacity: 0;
+ -webkit-transform: translateX(-100%) rotate(-120deg);
+ transform: translateX(-100%) rotate(-120deg);
+}
+ 100% {
+ opacity: 1;
+ -webkit-transform: translateX(0px) rotate(0deg);
+ transform: translateX(0px) rotate(0deg);
+}
+}
+ @keyframes rollIn {
+ 0% {
+ opacity: 0;
+ -webkit-transform: translateX(-100%) rotate(-120deg);
+ -ms-transform: translateX(-100%) rotate(-120deg);
+ transform: translateX(-100%) rotate(-120deg);
+}
+ 100% {
+ opacity: 1;
+ -webkit-transform: translateX(0px) rotate(0deg);
+ -ms-transform: translateX(0px) rotate(0deg);
+ transform: translateX(0px) rotate(0deg);
+}
+}
+.rollIn {
+	-webkit-animation-name: rollIn;
+	animation-name: rollIn;
+}
+ @-webkit-keyframes flipInX {
+ 0% {
+ -webkit-transform: perspective(400px) rotateX(90deg);
+ transform: perspective(400px) rotateX(90deg);
+ opacity: 0;
+}
+ 40% {
+ -webkit-transform: perspective(400px) rotateX(-10deg);
+ transform: perspective(400px) rotateX(-10deg);
+}
+ 70% {
+ -webkit-transform: perspective(400px) rotateX(10deg);
+ transform: perspective(400px) rotateX(10deg);
+}
+ 100% {
+ -webkit-transform: perspective(400px) rotateX(0deg);
+ transform: perspective(400px) rotateX(0deg);
+ opacity: 1;
+}
+}
+ @keyframes flipInX {
+ 0% {
+ -webkit-transform: perspective(400px) rotateX(90deg);
+ -ms-transform: perspective(400px) rotateX(90deg);
+ transform: perspective(400px) rotateX(90deg);
+ opacity: 0;
+}
+ 40% {
+ -webkit-transform: perspective(400px) rotateX(-10deg);
+ -ms-transform: perspective(400px) rotateX(-10deg);
+ transform: perspective(400px) rotateX(-10deg);
+}
+ 70% {
+ -webkit-transform: perspective(400px) rotateX(10deg);
+ -ms-transform: perspective(400px) rotateX(10deg);
+ transform: perspective(400px) rotateX(10deg);
+}
+ 100% {
+ -webkit-transform: perspective(400px) rotateX(0deg);
+ -ms-transform: perspective(400px) rotateX(0deg);
+ transform: perspective(400px) rotateX(0deg);
+ opacity: 1;
+}
+}
+.flipInX {
+	-webkit-backface-visibility: visible !important;
+	-ms-backface-visibility: visible !important;
+	backface-visibility: visible !important;
+	-webkit-animation-name: flipInX;
+	animation-name: flipInX;
+}
+.demo {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+.demo a {
+	margin: 0 5px 20px;
+}
+#dialogBg {
+	width: 100%;
+	height: 100%;
+	background-color: #000000;
+	opacity: .6;
+	filter: alpha(opacity=60);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	display: none;
+}
+#dialog {
+	margin: 0 auto;
+	display: none;
+	background-color: #ffffff;
+	position: fixed;
+	z-index: 10000;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 280px;
+	margin: -120px 0 0 -180px;
+}
+#dialog1 {
+	position: fixed;
+	z-index: 20000;
+	display: none;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	top: 20%;
+	left: 50%;
+	width: 400px;
+	height: 390px;
+	margin: 0px 0 0 -180px;
+}
+.dialogTop {
+	width: 90%;
+	margin: 0 auto;
+	letter-spacing: 1px;
+	padding: 10px 0;
+}
+.dialogTop a {
+	width: 70%;
+	text-align: right;
+}
+.dialogIco {
+	width: 60px;
+	height: 20px;
+	position: absolute;
+	left: 50%;
+	margin-left: -25px;
+	margin-top: 10px;
+	font-size: 14px;
+	font-weight: bolder;
+}
+.editInfos {
+	padding: 0 0 15px;;
+	margin-top: 5px;
+}
+.editInfos li {
+	width: 86%;
+	margin: 15px auto auto;
+	text-align: left;
+}
+.editInfos li img {
+	margin-left: 10px;
+}
+.editInfos_name {
+	width: 100px;
+	border: 1px red solid;
+}
+.editInfos li font {
+	float: right;
+	margin: 0 15px;
+	line-height: 25px;
+}
+#ipt {
+	width: 200px;
+}
+#ipt1 {
+	width: 140px;
+}
+.ipt {
+	border: 1px solid #ccc;
+	padding: 5px;
+	font-size: 14px;
+	color: #4c4c4c;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	margin-left: 5px;
+	width: 250px;
+	height: 30px;
+}
+.ipt:focus {
+	outline: none;
+	border-color: #66afe9;
+}
+.submitBtn {
+	width: 90px;
+	height: 30px;
+	font-family: "微软雅黑", "microsoft yahei";
+	cursor: pointer;
+	margin-top: 10px;
+	margin-left: 130px;
+	display: inline-block;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	text-align: center;
+	background-color: #428bca;
+	color: #fff;
+}
+.submitBtn1 {
+	width: 120px;
+	height: 30px;
+	font-family: "微软雅黑", "microsoft yahei";
+	cursor: pointer;
+	display: inline-block;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	text-align: center;
+	background-color: #428bca;
+	color: #fff;
+	margin-left: 10px;
+}
+/*logo部分*/
+.small_box {
+	width: 100%;
+	height: 120px;
+	background: #fff;
+	padding-top: 30px;
+}
+.small {
+	width: 1000px;
+	height: auto;
+	margin: 0 auto;
+}
+.logo {
+	width: 100px;
+	height: 120px;
+	float: left;
+}
+.small_right {
+	float: left;
+	width: 760px;
+	height: 120px;
+	margin-left: 140px;
+}
+.info a {
+	float: right;
+	width: 150px;
+	height: 45px;
+	background: #F5841C ;
+	border-radius: 5px;
+	margin-top: 40px;
+	color: #fff;
+	line-height: 45px;
+	font-size: 16px;
+	font-family: "微软雅黑";
+	margin-right: 40px;
+	text-decoration: none;
+	text-align: center;
+}
+.info a:hover {
+	background: #D36A0A;
+}
+.info input:focus {
+	border: none;
+}
+/*导航-开始*/
+#wrap {
+	margin:10px auto 0;
+	width:100%;
+	height:60px;
+	background: url(../images/nav_bg.png) repeat-x top left;
+}
+#main_nav ul {
+	font-size: 13px;
+	list-style: none;
+}
+#main_nav {
+	height: 60px;
+	overflow: visible;
+	margin:0 auto;
+	width:1000px;
+}
+#main_nav li {
+	float: left;
+	position: relative;
+	z-index: 5;
+}
+
+#main_nav li a {
+	color: #fff;
+	display: block;
+	width: 166.5px;
+	height: 45px;
+	text-decoration: none;
+	line-height: 45px;
+	text-align: center;
+	margin-top: 2px;
+}
+#main_nav li ul li a {
+	font-size: 12px;
+	width: 164.5px;
+	height: 40px;
+	line-height: 40px;
+	margin: 0px;
+}
+#main_nav li ul li a:hover, #main_nav li.focus ul li a:hover {
+	background: #fe7210;
+}
+
+#main_nav li.focus a, #main_nav li a:hover {
+	background:url(../images/nav_over.png) no-repeat top left;
+}
+
+#main_nav li.focus ul li a {
+	background: none;
+}
+
+#main_nav li ul {
+	position: absolute;
+	top: 46px;
+	left: 0px;
+	background: #fd9342;
+	border-color: #de813b;
+	border-style: none solid solid;
+	border-width: medium 1px 1px;
+	display: none;
+}
+
+#main_nav li ul li{
+	float: none;
+}
+/*导航-结束*/
+
+/*驾驶常识-开始*/
+
+#nav {
+	height: 28px;
+	background: #F7F7F7;
+	border: 1px solid #D8D9D9;
+	margin: 0 auto;
+	width: 988px;
+	padding: 0 5px;
+	color: #666;
+	line-height: 28px;
+	margin-bottom: 10px;
+}
+.mt10 {
+	margin-top: 10px!important;
+}
+.body {
+	clear: both;
+	padding-top: 15px;
+	width:998px;
+	border:1px solid #ccc;
+	margin:0 auto 20px;
+}
+.body .bd {
+	clear: both;
+	line-height: 28px;
+	font-size: 16px;
+	font-family: "宋体";
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: justify;
+	text-indent: 2em;
+	word-wrap: break-word;
+}
+.body .bd p {
+	padding-bottom: 29px;
+}
+.body .pn dl {
+	line-height: 30px;
+	padding-left:30px;
+}
+.cpg {
+	padding-bottom: 20px;
+}
+.cpg a, .cpg span {
+	padding: 4px 9px;
+	margin-right: 8px;
+}
+.cpg a {
+	border: 1px solid #DCDDDD;
+}
+.cpg span {
+	background: #2D96E9;
+	color: #FFFFFF;
+}
+.cpg a:hover {
+	background: #2D96E9;
+	color: #FFFFFF;
+}
+
+/*驾驶常识-结束*/
+
+/*尾部-开始*/
+.footer {
+	width: 100%;
+	height: 300px;
+	margin: 0 auto;
+	color: #fff;
+	font-size: 14px;
+	background: #525252;
+	clear:both;
+}
+.footer_div {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 25px 0;
+}
+.footer_tit {
+	line-height: 40px;
+	border-bottom: 1px solid #fff;
+}
+.footer_left {
+	float: left;
+	width: 250px;
+}
+.footer_left ul {
+	margin-top: 15px;
+}
+.footer_left ul li {
+	height: 30px;
+	width: 125px;
+	float: left;
+	text-align: left;
+	font-size: 12px;
+	line-height: 30px;
+}
+.clear {
+	clear: both;
+}
+.footer_left ul li span {
+	display: block;
+}
+.footer_left ul li a {
+	color: #fff;
+}
+.footer_center {
+	float: left;
+	width: 398px;
+	margin: 0 50px;
+}
+.footer_p {
+	line-height: 22px;
+	margin-top: 15px;
+	margin-bottom: 6px;
+	font-size: 12px;
+}
+.footer_right {
+	float: left;
+	width: 252px;
+}
+.footer_right p {
+	color: #fff;
+	font-size: 14px;
+	line-height: 40px;
+	text-align: left;
+}
+.footer_right p a {
+	color: #fff;
+}
+.footer_right .info p {
+	height: 25px;
+	line-height: 25px;
+	margin-bottom: 0;
+}
+.footer_bottom {
+	color: #4d4d4d;
+	font-size: 12px;
+	line-height: 41px;
+	text-align: center;
+	background: #e6e6e6;
+	clear: both;
+}
+/*尾部-结束*/

@@ -1,0 +1,956 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>新广货运联盟-行内互动信息</title>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/WdatePicker.js"></script>
+<script src="js/main.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#main_nav').allenMenu();
+		$('#slide').allenSlide();
+		//$('a[name=need_lightbox]').lightBox();
+	});
+</script>
+<script type="text/javascript">
+	// 收缩展开效果
+	$(document).ready(function(){
+		$('#yincang').click(function(){
+			$(this).children('.text').slideToggle().parents('#yincang').siblings('#yincang').children('.text').hide();
+		})   
+	});
+</script>
+<link rel="stylesheet" href="css/reset.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/line details.css">
+<link rel="stylesheet" type="text/css" href="css/LocationRange.css">
+<!--登录注册-开始-->
+<script src="js/jquery.XYTipsWindow.min.2.8.js"></script>
+<script type="text/javascript">
+ $(document).ready(function() {
+	$("#login").click(function(){
+		$.XYTipsWindow({
+			___title:"会员登录",
+			___content:"iframe:login.html",
+			___width:"480",
+			___height:"180",
+			___showbg:true,
+			___drag:"___boxTitle"
+
+		});
+	});
+	
+	$("#reg").click(function(){
+		$.XYTipsWindow({
+			___title:"会员注册",
+			___content:"iframe:reg.html",
+			___width:"460",
+			___height:"450",
+			___showbg:true,
+			___drag:"___boxTitle"
+		});
+	});
+ })
+</script>
+<!--登录注册-结束-->
+
+</head>
+<body>
+<!--top开始-->
+<div class="top_box">
+    <div class="top">
+        <p class="top_left">您好，欢迎来到新广货运联盟！</p>
+        <div class="top_right">
+        	<a href="alliance%20profile.html">欢迎加盟</a>
+            <!--登录-->
+            <div class="box">
+                <div class="demo">
+                	<button style="display:none"><a href="modify%20data.html">su23c0e</a></button>
+                    <button style="display:none">退出</button>
+                    <button id="login">登录</button>
+					<button id="reg">注册</button>
+                </div>
+            </div>          
+        </div>	
+    </div> 
+</div>
+<!--top结束-->
+
+<!--LOGO部分开始-->
+<div class="small_box">
+    <div class="small">
+    <img src="images/logo.png" class="logo">
+        <div class="small_right">
+           <div class="info"><a href="freight%20information.html">货运信息发布</a></div>
+        </div>
+    </div>
+</div>
+<!--LOGO部分结束--> 
+
+<!--nav导航开始-->
+<div id="wrap">
+	<div class="footer_tit" id="main_nav">
+		<ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="alliance%20profile.html">联盟简介</a></li>
+            <li><a href="">货运信息</a>
+                <ul>
+                    <li><a href="freight%20details.html">货源信息</a></li>
+                    <li><a href="freight%20details.html">车源信息</a></li>
+                    <li><a href="freight%20map.html">货运地图</a></li>
+                </ul>
+            </li>
+            <li><a href="">司机读本</a>
+                <ul>
+                    <li><a href="driving%20knowledge.html">驾驶常识</a></li>
+                    <li><a href="driving%20knowledge.html">政策法规</a></li>
+                    <li><a href="driving%20knowledge.html">卡车评估</a></li>
+                    <li><a href="driving%20knowledge.html">修车指导</a></li>
+                </ul>
+            </li>
+            <li><a href="">行内互动</a>
+                <ul>
+                    <li><a href="line%20interaction.html">驾照分数</a></li>
+                    <li><a href="line%20interaction.html">车辆交易</a></li>
+                    <li><a href="line%20interaction.html">招聘信息</a></li>
+                </ul>
+            </li>
+            <li><a href="contact%20us.html">联系我们</a></li>
+		</ul>		
+	</div>
+	<div class="clear"></div>
+</div>
+
+<!--内容content-->
+<div class="new_main">
+    <div class="new_header">
+        <div class="hz_importance">
+            <div class="new_header_div"> 
+               <!--合作-->
+               <div class="cy_div">
+                  <ul class="cy_div_ul">
+                      <li class="cur" onclick="setTab2('huo',1,3)" id="huo1"><a href="javascript:;">驾照分数</a></li>
+                      <li id="huo2" onclick="setTab2('huo',2,3)"><a href="javascript:;">车辆交易</a></li>
+                      <li id="huo3" onclick="setTab2('huo',3,3)"><a href="javascript:;">招聘信息</a></li>
+                  </ul>
+                  <div class="clear"></div>
+                  <div class="new_cy list_huo1">
+                      <ul class="tab_div_ul">
+                          <li>
+                              <label>所在城市</label>
+                              <div class="list_div area-wraper">
+                                  <input class="list_select" autocomplete="off" id="search_endcity" name="search_endcity" placeholder="" type="text">
+                                  <span style="display: none;" class="area-select area-tab">
+                                      <ul class="h">
+                                          <li tabindex="0" class="s-tab-t current"><span class="inner" index="0">常用</span></li>
+                                          <li tabindex="1" class="s-tab-t"><span class="inner" index="1">省</span></li>
+                                          <li tabindex="2" class="s-tab-t"><span class="inner" index="2">市</span></li>
+                                          <li tabindex="3" class="s-tab-t"><span class="inner" index="3">区县</span></li>
+                                          <span class="alp-close alp-close-area">&nbsp;</span>
+                                          <div class="c"></div>
+                                      </ul>
+                                      <div style="display: block;" index="0" class="s-tab-b">
+                                          <ul>
+                                              <li><a href="javascript:;" class="panel-item" code="291" panel-item="深圳市">深圳市</a></li>
+                                              <li><a href="javascript:;" class="panel-item" code="289" panel-item="广州市">广州市</a></li>
+                                              <li><a href="javascript:;" class="panel-item" code="166" panel-item="苏州市">苏州市</a></li>
+                                              <li><a href="javascript:;" class="panel-item" code="385" panel-item="成都市">成都市</a></li>
+                                              <li><a href="javascript:;" class="panel-item" code="305" panel-item="东莞市">东莞市</a></li>
+                                              <li><a href="javascript:;" class="panel-item" code="176" panel-item="宁波市">宁波市</a></li>
+                                              <li><a href="javascript:;" class="panel-item" code="175" panel-item="杭州市">杭州市</a></li>
+                                              <li><a href="javascript:;" class="panel-item" code="224" panel-item="青岛市">青岛市</a></li>
+                                              <li><a href="javascript:;" class="panel-item" code="258" panel-item="武汉市">武汉市</a></li>
+                                              <li><a href="javascript:;" class="panel-item" code="294" panel-item="佛山市">佛山市</a></li>
+                                              <li><a href="javascript:;" class="panel-item" code="240" panel-item="郑州市">郑州市</a></li>
+                                          </ul>
+                                          <div class="c"></div>
+                                      </div>
+                                      <div style="display: none;" index="1" class="s-tab-b">
+                                         <dl class="panel-category">
+                                            <dt>O-T</dt>
+                                            <dd>
+                                                <ul>
+                                                    <li><a href="javascript:;" class="panel-item" code="25" panel-item="上海市">上海市</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="27" panel-item="天津市">天津市</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="22" panel-item="青海省">青海省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="26" panel-item="四川省">四川省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="23" panel-item="山东省">山东省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="11" panel-item="山西省">山西省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="24" panel-item="陕西省">陕西省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="3379" panel-item="台湾">台湾</a></li>
+                                                </ul>
+                                            </dd>
+                                         </dl>
+                                        <dl class="panel-category">
+                                            <dt>A-G</dt>
+                                            <dd>
+                                                <ul>
+                                                    <li><a href="javascript:;" class="panel-item" code="2" panel-item="北京市">北京市</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="1" panel-item="安徽省">安徽省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="3378" panel-item="澳门">澳门</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="3" panel-item="福建省">福建省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="5" panel-item="广东省">广东省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="4" panel-item="甘肃省">甘肃省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="6" panel-item="广西壮族自治区">广西壮族自治区</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="8" panel-item="贵州省">贵州省</a></li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="panel-category">
+                                            <dt>W-Z</dt>
+                                            <dd>
+                                                <ul>
+                                                    <li><a href="javascript:;" class="panel-item" code="31" panel-item="重庆市">重庆市</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="28" panel-item="西藏自治区">西藏自治区</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="3377" panel-item="香港">香港</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="29" panel-item="新疆维吾尔自治区">新疆维吾尔自治区</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="7" panel-item="云南省">云南省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="30" panel-item="浙江省">浙江省</a></li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="panel-category">
+                                            <dt>H-N</dt>
+                                            <dd>
+                                                <ul>
+                                                    <li><a href="javascript:;" class="panel-item" code="14" panel-item="湖北省">湖北省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="10" panel-item="河北省">河北省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="13" panel-item="黑龙江省">黑龙江省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="9" panel-item="海南省">海南省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="15" panel-item="湖南省">湖南省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="12" panel-item="河南省">河南省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="16" panel-item="吉林省">吉林省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="17" panel-item="江苏省">江苏省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="18" panel-item="江西省">江西省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="19" panel-item="辽宁省">辽宁省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="20" panel-item="内蒙古自治区">内蒙古自治区</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="21" panel-item="宁夏回族自治区">宁夏回族自治区</a></li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                      </div>
+                                      <div style="display: none;" index="2" class="s-tab-b"></div>
+                                      <div style="display: none;" index="3" class="s-tab-b"></div>
+                                      <div class="c"></div>
+                                  </span>
+                                  <input id="type" name="type" value="8" placeholder="" type="hidden">
+                              </div>
+                              <div class="chaxun_3 area-wraper">
+                                 <div class="list_div">
+                                    驾照类型&nbsp;
+                                    <select name="cartype" class="list_type" style="text-align:center;">
+                                        <option value="请选择" selected>请选择</option>
+                                        <option value="A1">A1</option>
+                                        <option value="A2">A2</option>
+                                        <option value="A3">A3</option>
+                                        <option value="B1">B1</option>
+                                        <option value="B2">B2</option>
+                                        <option value="C1">C1</option>
+                                        <option value="C2">C2</option>
+                                        <option value="C3">C3</option>
+                                        <option value="C4">C4</option>
+                                        <option value="D">D</option>
+                                        <option value="E">E</option>
+                                        <option value="F">F</option>
+                                        <option value="M">M</option>
+                                        <option value="N">N</option>
+                                        <option value="P">P</option>
+                                    </select>
+                                 </div>
+                              </div>
+                              <div class="new_tab_bottom">
+                                  <a href="javascript:;" class="chaxun">搜索</a>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="new_cy list_huo2" style="display:none;">
+                      <ul class="tab_div_ul">
+                             <li>
+                             	<div class="chaxun_3 area-wraper" style="margin-left:30px;">
+                                 <div class="list_div">
+                                    我要&nbsp;
+                                    <select name="cartype" class="list_type">
+                                        <option value="请选择" selected>请选择</option>
+                                        <option value="买车">买车</option>
+                                        <option value="卖车">卖车</option>
+                                    </select>
+                                 </div>
+                              </div>
+                              <label>所在城市</label>
+                              <div class="list_div area-wraper">
+                                  <input class="list_select" autocomplete="off" id="search_endcity" name="search_endcity" placeholder="" type="text">
+                                  <span style="display: none;" class="area-select area-tab">
+                                      <ul class="h">
+                                          <li tabindex="0" class="s-tab-t current"><span class="inner" index="0">常用</span></li>
+                                          <li tabindex="1" class="s-tab-t"><span class="inner" index="1">省</span></li>
+                                          <li tabindex="2" class="s-tab-t"><span class="inner" index="2">市</span></li>
+                                          <li tabindex="3" class="s-tab-t"><span class="inner" index="3">区县</span></li>
+                                          <span class="alp-close alp-close-area">&nbsp;</span>
+                                          <div class="c"></div>
+                                      </ul>
+                                      <div style="display: block;" index="0" class="s-tab-b">
+                                          <ul>
+                                              <li><a href="javascript:;" class="panel-item" code="291" panel-item="深圳市">深圳市</a></li>
+                                              <li><a href="javascript:;" class="panel-item" code="289" panel-item="广州市">广州市</a></li>
+                                              <li><a href="javascript:;" class="panel-item" code="166" panel-item="苏州市">苏州市</a></li>
+                                              <li><a href="javascript:;" class="panel-item" code="385" panel-item="成都市">成都市</a></li>
+                                              <li><a href="javascript:;" class="panel-item" code="305" panel-item="东莞市">东莞市</a></li>
+                                              <li><a href="javascript:;" class="panel-item" code="176" panel-item="宁波市">宁波市</a></li>
+                                              <li><a href="javascript:;" class="panel-item" code="175" panel-item="杭州市">杭州市</a></li>
+                                              <li><a href="javascript:;" class="panel-item" code="224" panel-item="青岛市">青岛市</a></li>
+                                              <li><a href="javascript:;" class="panel-item" code="258" panel-item="武汉市">武汉市</a></li>
+                                              <li><a href="javascript:;" class="panel-item" code="294" panel-item="佛山市">佛山市</a></li>
+                                              <li><a href="javascript:;" class="panel-item" code="240" panel-item="郑州市">郑州市</a></li>
+                                          </ul>
+                                          <div class="c"></div>
+                                      </div>
+                                      <div style="display: none;" index="1" class="s-tab-b">
+                                         <dl class="panel-category">
+                                            <dt>O-T</dt>
+                                            <dd>
+                                                <ul>
+                                                    <li><a href="javascript:;" class="panel-item" code="25" panel-item="上海市">上海市</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="27" panel-item="天津市">天津市</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="22" panel-item="青海省">青海省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="26" panel-item="四川省">四川省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="23" panel-item="山东省">山东省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="11" panel-item="山西省">山西省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="24" panel-item="陕西省">陕西省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="3379" panel-item="台湾">台湾</a></li>
+                                                </ul>
+                                            </dd>
+                                         </dl>
+                                        <dl class="panel-category">
+                                            <dt>A-G</dt>
+                                            <dd>
+                                                <ul>
+                                                    <li><a href="javascript:;" class="panel-item" code="2" panel-item="北京市">北京市</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="1" panel-item="安徽省">安徽省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="3378" panel-item="澳门">澳门</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="3" panel-item="福建省">福建省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="5" panel-item="广东省">广东省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="4" panel-item="甘肃省">甘肃省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="6" panel-item="广西壮族自治区">广西壮族自治区</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="8" panel-item="贵州省">贵州省</a></li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="panel-category">
+                                            <dt>W-Z</dt>
+                                            <dd>
+                                                <ul>
+                                                    <li><a href="javascript:;" class="panel-item" code="31" panel-item="重庆市">重庆市</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="28" panel-item="西藏自治区">西藏自治区</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="3377" panel-item="香港">香港</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="29" panel-item="新疆维吾尔自治区">新疆维吾尔自治区</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="7" panel-item="云南省">云南省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="30" panel-item="浙江省">浙江省</a></li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="panel-category">
+                                            <dt>H-N</dt>
+                                            <dd>
+                                                <ul>
+                                                    <li><a href="javascript:;" class="panel-item" code="14" panel-item="湖北省">湖北省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="10" panel-item="河北省">河北省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="13" panel-item="黑龙江省">黑龙江省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="9" panel-item="海南省">海南省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="15" panel-item="湖南省">湖南省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="12" panel-item="河南省">河南省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="16" panel-item="吉林省">吉林省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="17" panel-item="江苏省">江苏省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="18" panel-item="江西省">江西省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="19" panel-item="辽宁省">辽宁省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="20" panel-item="内蒙古自治区">内蒙古自治区</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="21" panel-item="宁夏回族自治区">宁夏回族自治区</a></li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                      </div>
+                                      <div style="display: none;" index="2" class="s-tab-b"></div>
+                                      <div style="display: none;" index="3" class="s-tab-b"></div>
+                                      <div class="c"></div>
+                                  </span>
+                                  <input id="type" name="type" value="8" placeholder="" type="hidden">
+                              </div>
+                              <div class="chaxun_3 area-wraper">
+                                 <div class="list_div">
+                                    驾照类型&nbsp;
+                                    <select name="cartype" class="list_type" style="text-align:center;">
+                                        <option value="请选择" selected>请选择</option>
+                                        <option value="A1">A1</option>
+                                        <option value="A2">A2</option>
+                                        <option value="A3">A3</option>
+                                        <option value="B1">B1</option>
+                                        <option value="B2">B2</option>
+                                        <option value="C1">C1</option>
+                                        <option value="C2">C2</option>
+                                        <option value="C3">C3</option>
+                                        <option value="C4">C4</option>
+                                        <option value="D">D</option>
+                                        <option value="E">E</option>
+                                        <option value="F">F</option>
+                                        <option value="M">M</option>
+                                        <option value="N">N</option>
+                                        <option value="P">P</option>
+                                    </select>
+                                 </div>
+                              </div>
+                              <div class="new_tab_bottom">
+                                  <a href="javascript:;" class="chaxun">搜索</a>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="new_cy list_huo3" style="display:none;">
+                  	   <ul class="tab_div_ul">
+                           <li>
+                              <div class="list_div">
+                                  招聘岗位&nbsp;
+                                  <select name="cartype" class="list_type">
+                                      <option value="请选择" selected>请选择</option>
+                                      <option value="司机">司机</option>
+                                      <!--<option value=""></option>-->
+                                  </select>
+                              </div>
+                              <label>所在城市</label>
+                              <div class="list_div area-wraper">
+                                  <input class="list_select" autocomplete="off" id="search_endcity" name="search_endcity" placeholder="" type="text">
+                                  <span style="display: none;" class="area-select area-tab">
+                                      <ul class="h">
+                                          <li tabindex="0" class="s-tab-t current"><span class="inner" index="0">常用</span></li>
+                                          <li tabindex="1" class="s-tab-t"><span class="inner" index="1">省</span></li>
+                                          <li tabindex="2" class="s-tab-t"><span class="inner" index="2">市</span></li>
+                                          <li tabindex="3" class="s-tab-t"><span class="inner" index="3">区县</span></li>
+                                          <span class="alp-close alp-close-area">&nbsp;</span>
+                                          <div class="c"></div>
+                                      </ul>
+                                      <div style="display: block;" index="0" class="s-tab-b">
+                                          <ul>
+                                              <li><a href="javascript:;" class="panel-item" code="291" panel-item="深圳市">深圳市</a></li>
+                                              <li><a href="javascript:;" class="panel-item" code="289" panel-item="广州市">广州市</a></li>
+                                              <li><a href="javascript:;" class="panel-item" code="166" panel-item="苏州市">苏州市</a></li>
+                                              <li><a href="javascript:;" class="panel-item" code="385" panel-item="成都市">成都市</a></li>
+                                              <li><a href="javascript:;" class="panel-item" code="305" panel-item="东莞市">东莞市</a></li>
+                                              <li><a href="javascript:;" class="panel-item" code="176" panel-item="宁波市">宁波市</a></li>
+                                              <li><a href="javascript:;" class="panel-item" code="175" panel-item="杭州市">杭州市</a></li>
+                                              <li><a href="javascript:;" class="panel-item" code="224" panel-item="青岛市">青岛市</a></li>
+                                              <li><a href="javascript:;" class="panel-item" code="258" panel-item="武汉市">武汉市</a></li>
+                                              <li><a href="javascript:;" class="panel-item" code="294" panel-item="佛山市">佛山市</a></li>
+                                              <li><a href="javascript:;" class="panel-item" code="240" panel-item="郑州市">郑州市</a></li>
+                                          </ul>
+                                          <div class="c"></div>
+                                      </div>
+                                      <div style="display: none;" index="1" class="s-tab-b">
+                                         <dl class="panel-category">
+                                            <dt>O-T</dt>
+                                            <dd>
+                                                <ul>
+                                                    <li><a href="javascript:;" class="panel-item" code="25" panel-item="上海市">上海市</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="27" panel-item="天津市">天津市</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="22" panel-item="青海省">青海省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="26" panel-item="四川省">四川省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="23" panel-item="山东省">山东省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="11" panel-item="山西省">山西省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="24" panel-item="陕西省">陕西省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="3379" panel-item="台湾">台湾</a></li>
+                                                </ul>
+                                            </dd>
+                                         </dl>
+                                        <dl class="panel-category">
+                                            <dt>A-G</dt>
+                                            <dd>
+                                                <ul>
+                                                    <li><a href="javascript:;" class="panel-item" code="2" panel-item="北京市">北京市</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="1" panel-item="安徽省">安徽省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="3378" panel-item="澳门">澳门</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="3" panel-item="福建省">福建省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="5" panel-item="广东省">广东省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="4" panel-item="甘肃省">甘肃省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="6" panel-item="广西壮族自治区">广西壮族自治区</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="8" panel-item="贵州省">贵州省</a></li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="panel-category">
+                                            <dt>W-Z</dt>
+                                            <dd>
+                                                <ul>
+                                                    <li><a href="javascript:;" class="panel-item" code="31" panel-item="重庆市">重庆市</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="28" panel-item="西藏自治区">西藏自治区</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="3377" panel-item="香港">香港</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="29" panel-item="新疆维吾尔自治区">新疆维吾尔自治区</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="7" panel-item="云南省">云南省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="30" panel-item="浙江省">浙江省</a></li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                        <dl class="panel-category">
+                                            <dt>H-N</dt>
+                                            <dd>
+                                                <ul>
+                                                    <li><a href="javascript:;" class="panel-item" code="14" panel-item="湖北省">湖北省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="10" panel-item="河北省">河北省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="13" panel-item="黑龙江省">黑龙江省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="9" panel-item="海南省">海南省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="15" panel-item="湖南省">湖南省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="12" panel-item="河南省">河南省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="16" panel-item="吉林省">吉林省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="17" panel-item="江苏省">江苏省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="18" panel-item="江西省">江西省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="19" panel-item="辽宁省">辽宁省</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="20" panel-item="内蒙古自治区">内蒙古自治区</a></li>
+                                                    <li><a href="javascript:;" class="panel-item" code="21" panel-item="宁夏回族自治区">宁夏回族自治区</a></li>
+                                                </ul>
+                                            </dd>
+                                        </dl>
+                                      </div>
+                                      <div style="display: none;" index="2" class="s-tab-b"></div>
+                                      <div style="display: none;" index="3" class="s-tab-b"></div>
+                                      <div class="c"></div>
+                                  </span>
+                                  <input id="type" name="type" value="8" placeholder="" type="hidden">
+                              </div>
+                              <div class="new_tab_bottom">
+                                  <a href="javascript:;" class="chaxun">搜索</a>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+                  <!--驾照分数-->
+                  <div class="list_huo1">
+                      <div class="hy_right_top">
+                          <p>驾照分数</p>
+                      </div>
+                      <table class="hy_list" border="0" width="1000">
+                          <tbody>
+                              <tr class="hy_list_tit">
+                                  <td class="list_ddh" style="width:155px;">姓名</td>
+                                  <td class="list_yslx" style="width:155px;">驾照类型</td>
+                                  <td class="list_hwms" style="width:155px;">驾照分数</td>
+                                  <td class="list_jgyx" style="width:155px;">所在城市</td>
+                                  <td class="list_fbsj" style="width:155px;">联系电话</td>
+                                  <td class="list_jd list_fh" style="width:155px;">查看</td>
+                              </tr>
+                          </tbody>
+                      </table>
+                      <table class="hy_list" id="demo1" border="0" width="1000">
+                          <tbody>
+                              <tr>
+                                  <td class="list_ddh" style="width:155px;">
+                                      <div class="list_ddh_div">
+                                          <div class="list_ddh_left" style="background-image:url(images/huiyuan.png); background-size:100%"></div>
+                                          <div class="list_ddh_right">
+                                              <p>易平立</p>
+                                          </div>
+                                          <div class="clear"></div>
+                                      </div>
+                                  </td>
+                                  <td class="list_yslx" style="width:155px;">
+                                      <p><span>C1</p>
+                                  </td>
+                                  <td class="list_hwms" style="width:155px;">12</td>
+                                  <td class="list_jgyx" style="width:155px;">郑州</td>
+                                  <td class="list_fbsj" style="width:155px;">182XXXXXXXX</td>
+                                  <td class="list_jd list_fh" style="width:155px;"><a href="javascript:;">查看</a></td>
+                              </tr>
+                              <tr>
+                                  <td class="list_ddh" style="width:155px;">
+                                      <div class="list_ddh_div">
+                                          <div class="list_ddh_left" style="background-image:url(images/huiyuan.png); background-size:100%"></div>
+                                          <div class="list_ddh_right">
+                                              <p>易平立</p>
+                                          </div>
+                                          <div class="clear"></div>
+                                      </div>
+                                  </td>
+                                  <td class="list_yslx" style="width:155px;">
+                                      <p><span>C1</p>
+                                  </td>
+                                  <td class="list_hwms" style="width:155px;">12</td>
+                                  <td class="list_jgyx" style="width:155px;">郑州</td>
+                                  <td class="list_fbsj" style="width:155px;">182XXXXXXXX</td>
+                                  <td class="list_jd list_fh" style="width:155px;"><a href="javascript:;">查看</a></td>
+                              </tr>
+                              <tr>
+                                  <td class="list_ddh" style="width:155px;">
+                                      <div class="list_ddh_div">
+                                          <div class="list_ddh_left" style="background-image:url(images/huiyuan.png); background-size:100%"></div>
+                                          <div class="list_ddh_right">
+                                              <p>易平立</p>
+                                          </div>
+                                          <div class="clear"></div>
+                                      </div>
+                                  </td>
+                                  <td class="list_yslx" style="width:155px;">
+                                      <p><span>C1</p>
+                                  </td>
+                                  <td class="list_hwms" style="width:155px;">12</td>
+                                  <td class="list_jgyx" style="width:155px;">郑州</td>
+                                  <td class="list_fbsj" style="width:155px;">182XXXXXXXX</td>
+                                  <td class="list_jd list_fh" style="width:155px;"><a href="javascript:;">查看</a></td>
+                              </tr>
+                              <tr>
+                                  <td class="list_ddh" style="width:155px;">
+                                      <div class="list_ddh_div">
+                                          <div class="list_ddh_left" style="background-image:url(images/huiyuan.png); background-size:100%"></div>
+                                          <div class="list_ddh_right">
+                                              <p>易平立</p>
+                                          </div>
+                                          <div class="clear"></div>
+                                      </div>
+                                  </td>
+                                  <td class="list_yslx" style="width:155px;">
+                                      <p><span>C1</p>
+                                  </td>
+                                  <td class="list_hwms" style="width:155px;">12</td>
+                                  <td class="list_jgyx" style="width:155px;">郑州</td>
+                                  <td class="list_fbsj" style="width:155px;">182XXXXXXXX</td>
+                                  <td class="list_jd list_fh" style="width:155px;"><a href="javascript:;">查看</a></td>
+                              </tr>
+                              <tr>
+                                  <td class="list_ddh" style="width:155px;">
+                                      <div class="list_ddh_div">
+                                          <div class="list_ddh_left" style="background-image:url(images/huiyuan.png); background-size:100%"></div>
+                                          <div class="list_ddh_right">
+                                              <p>易平立</p>
+                                          </div>
+                                          <div class="clear"></div>
+                                      </div>
+                                  </td>
+                                  <td class="list_yslx" style="width:155px;">
+                                      <p><span>C1</p>
+                                  </td>
+                                  <td class="list_hwms" style="width:155px;">12</td>
+                                  <td class="list_jgyx" style="width:155px;">郑州</td>
+                                  <td class="list_fbsj" style="width:155px;">182XXXXXXXX</td>
+                                  <td class="list_jd list_fh" style="width:155px;"><a href="javascript:;">查看</a></td>
+                              </tr>
+                          </tbody>
+                      </table>
+                      <div class="list_more" id="getmore1">更多»</div>
+                  </div>
+                  <!--车辆交易-->
+                  <div class="list_huo2" style=" display:none">
+                      <div class="hy_right_top">
+                          <p>车辆交易</p>
+                      </div>
+                      <table class="hy_list" border="0" width="1000">
+                          <tbody>
+                              <tr class="hy_list_tit">
+                                  <td class="list_ddh ">身份</td>
+                                  <td class="list_yslx">车辆类型</td>
+                                  <td class="list_fbsj">车辆描述</td>
+                                  <td class="list_hwms">所在城市</td>
+                                  <td class="list_jgyx">首次上牌</td>
+                                  <td class="list_fbsj">车辆长度</td>
+                                  <td class="list_fbsj">图片展示</td>
+                                  <td class="list_jd list_fh">查看</td>
+                              </tr>
+                          </tbody>
+                      </table>
+                      <table class="hy_list" id="demo2" border="0" width="1000">
+                      	  <tbody>
+                          	  <tr>
+                                  <td class="list_ddh">卖家</td>
+                                  <td class="list_yslx">
+                                      <p><span>C1</p>
+                                  </td>
+                                  <td class="list_fbsj">车辆描述车辆描述车辆描述车辆描述</td>
+                                  <td class="list_hwms">郑州</td>
+                                  <td class="list_jgyx">2012-02-12</td>
+                                  <td class="list_fbsj">4.2米</td>
+                                  <td class="list_fbsj"><img src="images/eee.jpg" alt="车辆图片展示"></td>
+                                  <td class="list_jd list_fh" id="yincang">
+                                  	  <a id="CE694431">查看</a>
+                                      <div class="text" style="display:none; width:200px; height:40px; line-height:40px; position:absolute; background:#eaeaea; text-align:center;">
+                                          <span>联系电话：</span>
+                                          <span>182XXXXXXXX</span>
+                                      </div>
+                                  </td>
+                              </tr>
+                              <tr>
+                                  <td class="list_ddh">卖家</td>
+                                  <td class="list_yslx">
+                                      <p><span>C1</p>
+                                  </td>
+                                  <td class="list_fbsj">车辆描述车辆描述车辆描述车辆描述</td>
+                                  <td class="list_hwms">郑州</td>
+                                  <td class="list_jgyx">2012-02-12</td>
+                                  <td class="list_fbsj">4.2米</td>
+                                  <td class="list_fbsj"><img src="images/eee.jpg" alt="车辆图片展示"></td>
+                                  <td class="list_jd list_fh" id="yincang">
+                                  	  <a id="CE694431">查看</a>
+                                      <div class="text" style="display:none; width:200px; height:40px; line-height:40px; position:absolute; background:#eaeaea; text-align:center;">
+                                        	<span>联系电话：</span>
+                                            <span>182XXXXXXXX</span>
+                                        </div>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                      <div class="list_more" id="getmore2">更多»</div>
+                  </div>
+                  <!--招聘信息-->
+                  <div class="list_huo3" style=" display:none">
+                      <div class="hy_right_top">
+                          <p>招聘信息</p>
+                      </div>
+                      <table border="0" width="1000" class="hy_list">
+                          <tbody>
+                              <tr class="hy_list_tit">
+                                  <td class="list_ddh" style="">岗位</td>
+                                  <td class="list_yslx">公司名称</td>
+                                  <td class="list_hwms">薪资待遇</td>
+                                  <td class="list_jgyx" style="width:150px;">地址</td>
+                                  <td class="list_fbsj">年龄范围</td>
+                                  <td class="list_fbsj" style="width:170px;">岗位要求</td>
+                                  <td class="list_jd list_fh">状态</td>
+                              </tr>
+                          </tbody>
+                      </table>
+                      <table border="0" width="1000" class="hy_list" id="demo3">
+                      	  <tbody>
+                              <tr>
+                                  <td class="list_ddh">货车司机</td>
+                                  <td class="list_yslx">郑州智坤科技</td>
+                                  <td class="list_hwms">3000</td>
+                                  <td class="list_jgyx" style="width:150px;">河南省-郑州市-金水区</td>
+                                  <td class="list_fbsj">40~50</td>
+                                  <td class="list_fbsj" style="width:170px;">技术娴熟，没有出过交通事故</td>
+							      <td class="list_jd list_fh">
+                                  	  <a id="yincang">查看</a>
+                                      <div class="text" style="display:none; width:200px; height:40px; line-height:40px; position:absolute; background:#eaeaea; text-align:center;">
+                                          <span>联系电话：</span>
+                                          <span>182XXXXXXXX</span>
+                                      </div>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                      <div class="list_more" id="getmore2">更多»</div>
+                  </div>
+                  <div style="width:100%; height:40px;"></div>
+               </div>
+               <!--合作--> 
+            </div>
+        </div>
+    </div>
+</div>
+<!--显示隐藏js--> 
+<script type="text/javascript">
+	var app_url ='';
+	function setTab2(name,cursel,n){
+	for(i=1;i<=n;i++){
+		if(cursel==i){
+		   $('#'+name+i).attr("class","cur");
+
+		   $('.list_'+name+i).css("display","block");
+		 }else{
+		   $('#'+name+i).attr("class","");
+		   $('.list_'+name+i).css("display","none");
+		 }
+	}
+}  
+
+$(document).ready(function(){	
+	   $.post(app_url+"goodslist/",{num:0,type:8},function(data){
+			if(data.resid){
+					  $('#demo1').html(data.msg);
+				}
+			},'json');
+		
+		$.post(app_url+"goods_count/",{},function(data){
+		if(data.resid){
+				  $('#zxhz').html(data.msg);	
+				  $('#zxcy').html(data.msgs);
+			}
+		},'json');
+
+	}); 
+
+$(function(){
+	 var offnum = 0; 
+	 var num = 0; 
+	 $('.denglu').click(function(){
+	   $('.head').toggle();  
+	});  
+	  $('.guanbi').click(function(){
+	   $('.head').hide();
+	});
+   
+	  $('.chaxun').click(function(){
+		   var  search_begincity = $('#search_begincity').val();
+		   var  search_endcity = $('#search_endcity').val();
+		   if(search_begincity.length <= 0 &&search_endcity.length <= 0 ){
+			$('#demo1').show().html("<div style='font-size:12px; color:#ff0000; line-height:24px; padding-left:20px;'>请输入出发城市或到达城市！</div>");
+			return false;
+		   }
+		   var  type = $('#type').val();
+			$.post(app_url+"goodslist/",{num:0,type:type,search_begincity:search_begincity,search_endcity:search_endcity},function(data){
+				if(data.resid){
+						  $('#demo1').html(data.msg);
+					}
+				},'json');
+		});
+	 $('#huo1').click(function(){
+
+			$.post(app_url+"goodslist/",{num:0,type:8},function(data){
+				if(data.resid){
+						  $('#demo1').html(data.msg);
+					}
+				},'json');
+	   
+		});		
+	
+	$('#getmore1').click(function(){
+		offnum += 1;
+			$.post(app_url+"goodslist/",{num:offnum,type:8},function(data){
+				if(data.resid){
+						  $('#demo1').append(data.msg);
+					}
+			},'json');
+  });	
+		
+		
+			
+	 $('#huo2').click(function(){
+
+			$.post(app_url+"goodslist/",{num:0,type:1},function(data){
+				if(data.resid){
+						  $('#demo2').html(data.msg);
+					}
+				},'json');
+	   
+		});
+	$('#getmore2').click(function(){
+		num += 1;
+			$.post(app_url+"goodslist/",{num:num,type:1},function(data){
+				if(data.resid){
+						  $('#demo2').append(data.msg);
+					}
+			},'json');
+  });		
+		
+		
+	$('#huo3').click(function(){
+			$.post(app_url+"goodslist/",{num:0,type:2},function(data){
+				if(data.resid){
+						  $('#demo3').html(data.msg);
+					}
+				},'json');
+	   
+		});
+	
+			$('.dl_btnLogin').click(function(){
+		var mobile = $('#dl_mobileno').val();
+		var verify  = $('#dl_verify').val();
+		if(mobile.length <= 0){
+			$('.dl_yz_ts').show().html('手机要号码不能为空');
+			$('#dl_mobileno').focus();
+			return false;
+		}
+		if(verify.length <= 0){
+			$('.dl_yz_ts').show().html('验证码不能为空');
+			$('#dl_verify').focus();
+			return false;
+		}
+	//	return  false;
+		$.post(app_url+"register/",{mobileno:mobile,code:verify},function(data){
+		if(data.resid==1){
+				$('#main').append('<iframe frameborder="0" width="1px" height="1px" src="http://www.dwuliu.com/2.html"></iframe>');
+				$('.head').hide();
+				window.location.href=app_url;
+				$('.denglu').append(data.msg);
+				 
+			}else{
+				$('.dl_yz_ts').show().html(data.msg);
+			}
+		},'json');
+	 
+	 });	
+		
+		
+	});
+	function qiang(billno){
+
+		$.post(app_url+"car_bill_qiang/",{billno:billno},function(data){
+			if(data.resid==2){				       
+				$('#A' + billno).show().html(data.msg);
+				$('#C' + billno).show().html("已接单");
+			}else{
+			   $('#A' + billno).show().html(data.msg);
+			   $('.head').show();
+			}
+		},'json');
+	 
+//	$('#A' + billno).html('<div class="main_4_1">车主电话:15510686838</div><div class="main_4_2"><a>拨号</a></div>');		
+  }	
+function show(billno){
+
+$.post(app_url+"goods_qiang/",{bill:billno},function(data){
+	if(data.qianlist){
+		$('#add'+billno).toggle().html(data.qianlist);
+	}else{
+		$('#add'+billno).toggle().html(data.msg);
+		
+	}
+},'json');
+}	
+
+function dl_msn(){
+	var mobile = $('#dl_mobileno').val();
+	var yan_code = $('#dl_code').val();
+	if(mobile.length != 11){
+		$('.dl_yz_ts').show().html("手机号码输入错误！");
+		$('#dl_mobileno').focus();
+		return false;
+	}
+	$.post(app_url+"msn/",{mobile:mobile,yan_code:yan_code},function(data){
+		if(data.resid==3){
+			$('.dl_yz_ts').show().html(data.msg);
+		}else{	
+			$('.dl_yz_ts').show().html(data.msg);
+		}
+	},'json');
+}	
+</script> 
+<script src="js/jquery_002_002.js" type="text/javascript"></script> 
+<script src="js/areaData1.js" type="text/javascript"></script> 
+<script src="js/LocationRange.js" type="text/javascript"></script> 
+<script src="js/jquery_003.js" type="text/javascript"></script> 
+
+<!--尾部-开始-->
+<div class="footer">
+    <div class="footer_div">
+        <div class="footer_left">
+            <p class="footer_tit">友情链接</p>
+            <ul>
+                <li><a href="">中国物流网</a></li>
+                <li><a href="">全国物流信息网</a></li>
+                <li><a href="">申通物流</a></li>
+            </ul>
+        </div>
+        <div class="footer_center">
+            <p class="footer_tit">新广货运联盟</p>
+            <p class="footer_p">新广货运联盟提供创新的互联网物流技术与服务，打造新一代物流电商平台。</p>
+            <p class="footer_p">新广货运联盟平台拥有“第一物流”品牌，通过电脑版、手机网站、手机APP、微信平台产品，实现人与货，人与人之间的连接。通过大数据智能分析，帮助不同客户自由定制物流模式，进化效率，享受科技进步带来的乐趣。</p>
+        </div>
+        <div class="footer_right">
+            <p><a href="alliance%20profile.html">加盟我们</a>｜<a href="contact%20us.html">联系我们</a></p>
+            <div class="info">
+                <p><span>咨询电话：</span>400-xxxxxxxx 182XXXXXXXX</p>
+                <p><span>邮箱：</span>xinguanghuoyun@163.com</p>
+                <p><span>地址：</span>河南省郑州市金水区文化路9号永和国际大厦</p>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="footer_bottom">Copyright © 2012-2015 新广货运联盟 版权所有 Power by www.dwuliu.com   ICP备14059919号-1号 </div>
+</div>
+<!--尾部-结束--> 
+</body>
+</html>
