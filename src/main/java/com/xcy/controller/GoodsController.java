@@ -10,10 +10,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @RestController
 @EnableSwagger2
+@RequestMapping("/goods")
 public class GoodsController {
     @Autowired
     GoodsService goodsService;
@@ -23,6 +26,10 @@ public class GoodsController {
     }
     @RequestMapping(value = "/announceaGoods",method = RequestMethod.POST)
     public void announceaGoods(Goods goods){ //本质就是添加一个货源信息
+        Date date = new Date();
+        SimpleDateFormat s = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String time = s.format(date);
+        goods.setCreateTime(time);
         goodsService.announceaGoods(goods);
     }
     @RequestMapping(value ="/selectTruckByContion",method = RequestMethod.POST)
@@ -34,6 +41,36 @@ public class GoodsController {
     @RequestMapping(value ="/selectGoodsByContion",method = RequestMethod.POST)
     public String selectGoodsByContion(Goods goods){
         List<Goods> list= goodsService.selectGoodsByContion(goods);
+        String  s =JsonUtils.objectToJson(list);
+        return s;
+    }
+    @RequestMapping(value ="/selectGoodsById",method = RequestMethod.POST)
+    public Goods selectGoodsById(int id){
+        Goods goods = goodsService.selectGoodsById(id);
+        return goods;
+    }
+    @RequestMapping(value ="/selectTruckById",method = RequestMethod.POST)
+    public Truck selectTruckById(int id){
+        Truck truck = goodsService.selectTruckById(id);
+        return truck;
+    }
+    @RequestMapping(value ="/deleteTruckById",method = RequestMethod.POST)
+    public void deleteTruckById(int id){
+        goodsService.deleteTruckById(id);
+    }
+    @RequestMapping(value ="/deleteGoodsById",method = RequestMethod.POST)
+    public void deleteGoodsById(int id){
+        goodsService.deleteGoodsById(id);
+    }
+    @RequestMapping(value ="/selectGoodsByMyId",method = RequestMethod.POST)
+    public String selectGoodsByMyId(int id){
+        List<Goods> list = goodsService.selectGoodsByMyId(id);
+        String  s =JsonUtils.objectToJson(list);
+        return s;
+    }
+    @RequestMapping(value ="/selectTruckByMyId",method = RequestMethod.POST)
+    public String selectTruckByMyId(int id){
+        List<Goods> list = goodsService.selectTruckByMyId(id);
         String  s =JsonUtils.objectToJson(list);
         return s;
     }
