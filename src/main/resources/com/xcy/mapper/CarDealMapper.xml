@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xcy.mapper.CarDealMapper">
+
+    <insert id="addCareDeal" parameterType="CarDeal">
+        insert into carDeal(cdMM,cdCarType,cdCity,cdTime,cdCarLength,cdTel,cdDetail,cdImg)
+        value (#{cdMM},#{cdCarType},#{cdCity},#{cdTime},#{cdCarLength},#{cdTel},#{cdDetail},#{cdImg})
+    </insert>
+    <select id="listCarDeal" resultType="com.xcy.pojo.CarDeal">
+        select c.*,u.userRealName from carDeal c,user u where c.uid = u.userId
+    </select>
+    <select id="queryCarDeal" parameterType="com.xcy.pojo.CarDeal" resultType="com.xcy.pojo.CarDeal">
+        select c.*,u.userRealName from carDeal c,user u
+        <where>
+            and c.uid = u.userId
+            <if test="cdCity != null and cdCity !=''">
+                and cdCity = #{cdCity}
+            </if>
+            <if test="cdMM != null and cdMM !=''">
+                and cdMM = #{cdMM}
+            </if>
+            <if test="cdCarType != null and cdCarType !=''">
+                and cdCarType = #{cdCarType}
+            </if>
+        </where>
+    </select>
+</mapper>
