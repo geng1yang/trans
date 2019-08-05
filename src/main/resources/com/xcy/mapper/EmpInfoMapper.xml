@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xcy.mapper.EmpInfoMapper">
+
+    <insert id="addEI" parameterType="com.xcy.pojo.EmpInfo">
+        insert into employmentinfo(eiPost,eiCompanyName,eiSalary,eiCompanyAddress,eiAge,eiTel,eiDetail)
+        value (#{eiPost},#{eiCompanyName},#{eiSalary},#{eiCompanyAddress},#{eiAge},#{eiTel},#{eiDetail})
+    </insert>
+    <select id="listEI" resultType="com.xcy.pojo.EmpInfo">
+        select c.*,u.userRealName from employmentinfo c,user u where c.uid = u.userId
+    </select>
+    <select id="queryEI" parameterType="com.xcy.pojo.EmpInfo" resultType="com.xcy.pojo.EmpInfo">
+        select c.*,u.userRealName from employmentinfo c,user u
+        <where>
+            and c.uid = u.userId
+            <if test="eiPost != null and eiPost !=''">
+                and eiPost = #{eiPost}
+            </if>
+            <if test="eiCompanyAddress != null and eiCompanyAddress !=''">
+                and eiCompanyAddress = #{eiCompanyAddress}
+            </if>
+
+        </where>
+    </select>
+</mapper>

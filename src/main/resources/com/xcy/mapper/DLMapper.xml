@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xcy.mapper.DLMapper">
+
+    <insert id="addDL" parameterType="driverLicence">
+        insert into driverlicence(dlName,dlType,dlCity,dlPoint,dlTel)
+        value(#{dlName},#{dlType},#{dlCity},#{dlPoint},#{dlTel})
+    </insert>
+    <select id="listDL" resultType="com.xcy.pojo.DriverLicence">
+        select d.*,u.userRealName from driverlicence d,user u where d.uid = u.userId
+    </select>
+    <select id="queryDL" parameterType="com.xcy.pojo.DriverLicence" resultType="com.xcy.pojo.DriverLicence">
+        select d.*,u.userRealName from driverlicence d,user u
+        <where>
+            and d.uid = u.userId
+            <if test="dlCity != null and dlCity !=''">
+                and dlCity = #{dlCity}
+            </if>
+            <if test="dlType != null and dlType !=''">
+                and dlType = #{dlType}
+            </if>
+
+        </where>
+    </select>
+</mapper>
