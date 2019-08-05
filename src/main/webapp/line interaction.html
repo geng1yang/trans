@@ -37,6 +37,7 @@
 		});
 	});
  })
+
 </script>
 <!--登录注册-结束-->
 
@@ -120,15 +121,16 @@
               </ul>
               <!--驾照分数-->
               <div class="new_tab_div" id="list_one1">
+                  <form id="dlForm" onsubmit="return false">
                   <ul class="tab_div_ul">
                  	 <li>
                      	<label><span>*&nbsp;</span>姓名</label>
                         <div class="list_div">
-                            <input type="text" value="" placeholder="请输入您的姓名" style=" width:200px;">
+                            <input name="dlName" type="text" value="" placeholder="请输入您的姓名" style=" width:200px;">
                         </div>
                         <label><span>*&nbsp;</span>驾照类型</label>
                         <div class="list_div">
-                            <select name="cartype" class="list_type" style="width:150px;">
+                            <select name="dlType" class="list_type" style="width:150px;">
                             	<option value="请选择" selected>请选择</option>
                                 <option value="A1">A1</option>
                                 <option value="A2">A2</option>
@@ -151,7 +153,7 @@
                      <li>
                      	<label><span>*&nbsp;</span>所在城市</label>
                         <div class="list_div area-wraper">
-                            <input autocomplete="off" type="text" id="car_begincity" name="car_begincity" class="list_select" value="" placeholder="出发城市">
+                            <input autocomplete="off" type="text" id="car_begincity" name="dlCity" class="list_select" value="" placeholder="出发城市">
                             <span style="display: none;" class="area-select area-tab">
                                 <ul class="h">
                                     <li class="s-tab-t current" tabindex="0"><span class="inner" index="0">常用</span></li>
@@ -248,7 +250,7 @@
                         </div>
                         <label><span>*&nbsp;</span>驾照分数</label>
                         <div class="list_div">
-                            <select name="car_num" id="car_num" class="list_type" style="width:150px;">
+                            <select name="dlPoint" id="car_num" class="list_type" style="width:150px;">
                             	<option value="请选择" selected>请选择</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -268,20 +270,24 @@
                      <li>
                      	<label><span>*&nbsp;</span>联系电话</label>
                         <div class="list_div">
-                            <input name="cellphone" maxlength="11" type="text" placeholder="请输入手机号码" style=" width:200px;">
+                            <input name="dlTel" maxlength="11" type="text" placeholder="请输入手机号码" style=" width:200px;">
                         </div>
                      </li>
                  </ul>
                   <div class="clear"></div>
-                  <div class="new_tab_bottom"> <a class="car_btnLogin" href="javascript:;">发布</a> </div>
+                      <div class="new_tab_bottom"> <div class="_box">
+                          <input type="submit"  />发布
+                      </div> </div>
+                  </form>
               </div>
               <!--车辆交易-->
               <div class="new_tab_div" style=" display:none" id="list_one2">
+                  <form id="carForm" onsubmit="return false">
                  <ul class="tab_div_ul">
                  	 <li>
                      	 <label><span>*&nbsp;</span>我要</label>
                          <div class="list_div">
-                            <select class="list_type" style="width:130px; padding-right:0; padding-left:15px;">
+                            <select name="cdMM" class="list_type" style="width:130px; padding-right:0; padding-left:15px;">
                             	<option value="请选择" selected>请选择</option>
                             	<option value="买车">买车</option>
                             	<option value="卖车">卖车</option>
@@ -291,7 +297,7 @@
                  	 <li>
                      	<label><span>*&nbsp;</span>车辆类型</label>
                         <div class="list_div">
-                             <select name="cartype" id="cartype" class="list_type" style=" width:130px;">
+                             <select name="cdCarType" id="cartype" class="list_type" style=" width:130px;">
                              	<option value="请选择" selected>请选择</option>
                                 <option value="高栏车">高栏车</option>
                                 <option value="标箱车">标箱车</option>
@@ -301,7 +307,7 @@
                         </div>
                         <label><span>*&nbsp;</span>所在城市</label>
                         <div class="list_div area-wraper">
-                            <input autocomplete="off" type="text" id="car_begincity" name="car_begincity" class="list_select" value="" placeholder="出发城市">
+                            <input autocomplete="off" type="text" id="car_begincity" name="cdCity" class="list_select" value="" placeholder="出发城市">
                             <span style="display: none;" class="area-select area-tab">
                                 <ul class="h">
                                     <li class="s-tab-t current" tabindex="0"><span class="inner" index="0">常用</span></li>
@@ -398,13 +404,13 @@
                         </div>
                         <label>首次上牌</label>
                         <div class="list_div">
-							<input type="text" value="" placeholder="请输入时间" style=" width:150px;">
+							<input type="text" value="" name="cdTime" placeholder="请输入时间" style=" width:150px;">
                         </div>
                      </li>
                      <li>
                      	<label><span>*&nbsp;</span>车辆长度</label>
                         <div class="list_div">
-                            <select name="carlength" id="carlength" class="list_type" style="width:130px;">
+                            <select name="cdCarLength" id="carlength" class="list_type" style="width:130px;">
                             	<option value="请选择" selected>请选择</option>
                                 <option value="4.2米以下">4.2米以下</option>
                                 <option value="4.2米">4.2米</option>
@@ -419,35 +425,40 @@
                         </div>
                         <label><span>*&nbsp;</span>联系电话</label>
                         <div class="list_div">
-                            <input name="cellphone" maxlength="11" type="text" placeholder="请输入联系电话" style=" width:150px;">
+                            <input name="cdTel" maxlength="11" type="text" placeholder="请输入联系电话" style=" width:150px;">
                         </div>
                      </li>
                      <li>
                      	<label><span>*&nbsp;</span>车辆描述</label>
                         <div class="list_div">
-                            <textarea rows="5" cols="30" placeholder="例如：车辆何时购买，磨损情况，是否急需卖车或者买车等等"></textarea>
+                            <textarea name="cdDetail" rows="5" cols="30" placeholder="例如：车辆何时购买，磨损情况，是否急需卖车或者买车等等"></textarea>
                         </div>
                         <label>车辆图片</label>
                         <div class="list_div" style="width:150px; height:100px; border:1px solid #ccc; margin-top:10px;"></div>
-                        <form id="form1" runat="server" method="post" enctype="multipart/form-data" style="float:left; margin-top:80px;">
+
                             <div>
                                 <div class="_box">
-                                    <input type="file" name="_f" id="_f"/>上传图片 
+                                    <input type="file" name="fileUpload" id="_f"/>上传图片
                                 </div>
                             </div>
-                        </form>
+
                      </li>
                  </ul>
                  <div class="clear"></div>
-                 <div class="new_tab_bottom"> <a class="car_btnLogin" href="javascript:;">发布</a> </div>
+
+                 <div class="new_tab_bottom"> <div class="_box">
+                     <input type="submit" />发布
+                 </div> </div>
+                  </form>
               </div>
               <!--招聘信息-->
               <div class="new_tab_div" style=" display:none" id="list_one3">
+                  <form id="infoForm" onsubmit="return false">
                  <ul class="tab_div_ul">
                  	 <li>
                      	 <label><span>*&nbsp;</span>招聘岗位</label>
                          <div class="list_div">
-                            <select class="list_type" style="width:130px; padding-right:0; padding-left:15px;">
+                            <select name="eiPost" class="list_type" style="width:130px; padding-right:0; padding-left:15px;">
                             	<option value="请选择" selected>请选择</option>
                             	<option value="司机">司机</option>
                             <!--<option value=""></option>-->
@@ -455,13 +466,13 @@
                          </div>
                          <label>公司名称</label>
                          <div class="list_div">
-                            <input type="text" value="" placeholder="请输入公司名称或者个人称呼" style=" width:200px;">
+                            <input name="eiCompanyName" type="text" value="" placeholder="请输入公司名称或者个人称呼" style=" width:200px;">
                          </div>
                      </li>
                      <li>
                      	 <label>薪资待遇</label>
                          <div class="list_div">
-                            <select class="list_type" style="width:130px; padding-right:0; padding-left:15px;">
+                            <select name="eiSalary" class="list_type" style="width:130px; padding-right:0; padding-left:15px;">
                             	<option value="请选择" selected>请选择</option>
                             	<option value="面议">面议</option>
                             	<option value="0~1000">0~1000</option>
@@ -477,7 +488,7 @@
                          </div>
                          <label><span>*&nbsp;</span>公司地址</label>
                          <div class="list_div area-wraper">
-                            <input autocomplete="off" type="text" id="car_begincity" name="car_begincity" class="list_select" value="" placeholder="请选择地址">
+                            <input autocomplete="off" type="text" id="car_begincity" name="eiCompanyAddress" class="list_select" value="" placeholder="请选择地址">
                             <span style="display: none;" class="area-select area-tab">
                                 <ul class="h">
                                     <li class="s-tab-t current" tabindex="0"><span class="inner" index="0">常用</span></li>
@@ -576,7 +587,7 @@
                      <li>
                      	 <label>年龄范围</label>
                          <div class="list_div">
-                            <select class="list_type" style="width:130px; padding-right:0; padding-left:15px;">
+                            <select name="eiAge" class="list_type" style="width:130px; padding-right:0; padding-left:15px;">
                             	<option value="请选择" selected>请选择</option>
                             	<option value="20岁以下">20岁以下</option>
                             	<option value="20~30">20~30</option>
@@ -588,23 +599,26 @@
                          </div>
                         <label>联系电话</label>
                         <div class="list_div">
-                            <input name="cellphone" maxlength="11" type="text" placeholder="请输入手机号码" style=" width:200px;">
+                            <input name="eiTel" maxlength="11" type="text" placeholder="请输入手机号码" style=" width:200px;">
                         </div>
                      <li>
                      	<label><span>*&nbsp;</span>岗位要求</label>
                         <div class="list_div">
-                            <textarea rows="5" cols="30"></textarea>
+                            <textarea name="eiDetail" rows="5" cols="30"></textarea>
                         </div>
                      </li>
                  </ul>
                  <div class="clear"></div>
-                 <div class="new_tab_bottom"> <a class="car_btnLogin" href="javascript:;">发布</a> </div>
+                  <div class="new_tab_bottom"> <div class="_box">
+                      <input type="submit"  />发布
+                  </div> </div>
+                  </form>
               </div>
           </div>
           <div class="clear"></div>
       </div>
    </div>
-   <p style="color:red; float:right; margin-top:10px; margin-bottom:30px;">* 发布的信息只保留两天！</p>
+
 </div>
 <div class="bill">
     <div class="bill_left">
@@ -616,9 +630,10 @@
         </div>
         <!--驾照记分-->
         <div class="bill_left_text" id="list_huo1">
+            <form id="dLchaxun" onsubmit="return false">
         	<div class="bill_chaxun">
                 <div class="chaxun_2 area-wraper">所在城市&nbsp;
-                    <input class="cx" autocomplete="off" id="search_begincity" name="search_begincity" type="text">
+                    <input class="cx" autocomplete="off" id="search_begincity" name="dlCity" type="text">
                     <span style="display: none;" class="area-select area-tab">
                         <ul class="h">
                             <li class="s-tab-t current" tabindex="0"><span class="inner" index="0">常用</span></li>
@@ -716,7 +731,7 @@
                 <div class="chaxun_3 area-wraper">
                      <div class="list_div">
                      	驾照类型&nbsp;
-                        <select name="cartype" class="list_type" style="text-align:center;">
+                        <select name="dlType" class="list_type" style="text-align:center;">
                             <option value="请选择" selected>请选择</option>
                             <option value="A1">A1</option>
                             <option value="A2">A2</option>
@@ -736,8 +751,12 @@
                         </select>
                      </div>
                 </div>
-                <div class="chaxun_4 chaxun">查询</div>
-            </div>        
+                <div class="new_tab_bottom"> <div class="_box">
+                    <input type="submit"  />搜索
+                </div> </div>
+            </div>
+
+            </form>
             <table width="100%" border="0" cellspacing="10" cellpadding="0">
                 <tbody>
                     <tr>
@@ -752,40 +771,20 @@
             </table>
             <div style=" height:305px; overflow:auto">
             	<table width="100%" border="0" cellspacing="10" cellpadding="0" id="demo1">
-                	<tbody>
-                    	<tr>
-                        	<td width="150">张三</td>
-                            <td width="150">C1</td>
-                            <td>12</td>
-                            <td width="180">郑州</td>
-                            <td width="300">182XXXXXXXX</td>
-                            <td width="100" onclick="qiang(&quot;E690052&quot;)"><span id="CE690052">查看</span></td>
-                        </tr>
-                        <tr>
-                        	<td id="bT136465" style="display:none" colspan="7"></td>
-                        </tr>
-                        <tr>
-                        	<td width="150">张三</td>
-                            <td width="150">C1</td>
-                            <td>12</td>
-                            <td width="180">郑州</td>
-                            <td width="300">182XXXXXXXX</td>
-                            <td width="100" onclick="qiang(&quot;E690052&quot;)"><span id="CE690052">查看</span></td>
-                        </tr>
-                        <tr>
-                        	<td id="bT136464" style="display:none" colspan="7"></td>
-                        </tr>
+                	<tbody id="DLtbody">
+
                     </tbody>
                 </table>
             </div>
         </div>
         <!--车辆交易-->
         <div class="bill_left_text" id="list_huo2" style=" display:none">
+            <form id="carchaxun" onsubmit="return false">
         	<div class="bill_chaxun">
             	<div class="chaxun_3 area-wraper">
                      <div class="list_div">
                      	我要&nbsp;
-                        <select name="cartype" class="list_type">
+                        <select name="cdMM" class="list_type">
                         	<option value="请选择" selected>请选择</option>
                             <option value="买车">买车</option>
                             <option value="卖车">卖车</option>
@@ -793,7 +792,7 @@
                      </div>
                 </div>
                 <div class="chaxun_2 area-wraper">所在城市&nbsp;
-                    <input class="cx" autocomplete="off" id="search_begincity" name="search_begincity" type="text">
+                    <input class="cx" autocomplete="off" id="search_begincity" name="cdCity" type="text">
                     <span style="display: none;" class="area-select area-tab">
                         <ul class="h">
                             <li class="s-tab-t current" tabindex="0"><span class="inner" index="0">常用</span></li>
@@ -891,7 +890,7 @@
                 <div class="chaxun_3 area-wraper">
                     <div class="list_div">
                     	车辆类型&nbsp;
-                        <select name="cartype" class="list_type">
+                        <select name="cdCarType" class="list_type">
                         	<option value="请选择" selected>请选择</option>
                             <option value="高栏车">高栏车</option>
                             <option value="标箱车">标箱车</option>
@@ -900,10 +899,13 @@
                         </select>
                     </div>
                 </div>
-                <div class="chaxun_4 chaxun">查询</div>
+                <div class="new_tab_bottom"> <div class="_box">
+                    <input type="submit"  />搜索
+                </div> </div>
             </div>
+            </form>
             <table width="100%" border="0" cellspacing="10" cellpadding="0">
-                <tbody>
+                <tbody >
                     <tr>
                         <td style=" width:150px; background-color:#ebebeb">身份</td>
                         <td style=" width:150px; background-color:#ebebeb">车辆类型</td>
@@ -916,40 +918,20 @@
             </table>
             <div style=" height:305px; overflow:hidden">
             	<table width="100%" border="0" cellspacing="10" cellpadding="0" id="demo1">
-                	<tbody>
-                    	<tr>
-                        	<td width="150">张三</td>
-                            <td width="150">C1</td>
-                            <td>车是2012年买的，买的时候15万，现在急于出手，有意者联系</td>
-                            <td width="120">郑州</td>
-                            <td width="200">182XXXXXXXX</td>
-                            <td width="100" onclick="qiang(&quot;E690052&quot;)"><span id="CE690052">查看</span></td>
-                        </tr>
-                        <tr>
-                        	<td id="bT136465" style="display:none" colspan="7"></td>
-                        </tr>
-                        <tr>
-                        	<td width="150">张三</td>
-                            <td width="150">C1</td>
-                            <td>中国重汽 斯太尔M5G 340马力 4X2 牵引车(ZZ4183N361GD1)</td>
-                            <td width="120">郑州</td>
-                            <td width="200">182XXXXXXXX</td>
-                            <td width="100" onclick="qiang(&quot;E690052&quot;)"><span id="CE690052">查看</span></td>
-                        </tr>
-                        <tr>
-                        	<td id="bT136464" style="display:none" colspan="7"></td>
-                        </tr>
+                	<tbody id="CLtbody">
+
                     </tbody>
                 </table>
             </div>
         </div>
         <!--招聘信息-->
         <div class="bill_left_text" id="list_huo3" style=" display:none">
+            <form id="EIchaxun" onsubmit="return false">
         	<div class="bill_chaxun">
             	<div class="chaxun_3 area-wraper">
                     <div class="list_div">
                      	招聘岗位&nbsp;
-                        <select name="cartype" class="list_type">
+                        <select name="eiPost" class="list_type">
                         	<option value="请选择" selected>请选择</option>
                             <option value="司机">司机</option>
                             <!--<option value=""></option>-->
@@ -957,7 +939,7 @@
                      </div>
                 </div>
                 <div class="chaxun_2 area-wraper">所在城市&nbsp;
-                    <input class="cx" autocomplete="off" id="search_begincity" name="search_begincity" type="text">
+                    <input class="cx" autocomplete="off" id="search_begincity" name="eiCompanyAddress" type="text">
                     <span style="display: none;" class="area-select area-tab">
                         <ul class="h">
                             <li class="s-tab-t current" tabindex="0"><span class="inner" index="0">常用</span></li>
@@ -1052,8 +1034,12 @@
                         <div class="c"></div>
                     </span>
                 </div>
-                <div class="chaxun_4 chaxun">查询</div>
-            </div>        
+                <div class="new_tab_bottom"> <div class="_box">
+                    <input type="submit"  />搜索
+                </div> </div>
+
+            </div>
+            </form>
             <table width="100%" border="0" cellspacing="10" cellpadding="0">
                 <tbody>
                     <tr>
@@ -1068,29 +1054,9 @@
             </table>
             <div style=" height:305px; overflow:auto">
             	<table width="100%" border="0" cellspacing="10" cellpadding="0" id="demo3">
-                	<tbody>
-                    	<tr>
-                        	<td width="150">司机</td>
-                            <td width="150">3000</td>
-                            <td>20~50</td>
-                            <td width="180">XX有限公司</td>
-                            <td width="300">182XXXXXXXX</td>
-                            <td width="100" onclick="qiang(&quot;E690052&quot;)"><span id="CE690052">查看</span></td>
-                        </tr>
-                        <tr>
-                        	<td id="bT136465" style="display:none" colspan="7"></td>
-                        </tr>
-                        <tr>
-                        	<td width="150">司机</td>
-                            <td width="150">3000</td>
-                            <td>20~50</td>
-                            <td width="180">XX有限公司</td>
-                            <td width="300">182XXXXXXXX</td>
-                            <td width="100" onclick="qiang(&quot;E690052&quot;)"><span id="CE690052">查看</span></td>
-                        </tr>
-                        <tr>
-                        	<td id="bT136464" style="display:none" colspan="7"></td>
-                        </tr>
+                	<tbody id="EItbody">
+
+
                     </tbody>
                 </table>
             </div>
@@ -1098,26 +1064,217 @@
     </div>
     <div class="clear"></div>
 </div>
+<form enctype=""></form>
 
 <!--显示隐藏js--> 
 <script type="text/javascript">
+
+    $("#dLchaxun").submit(function () {
+        $("#DLtbody").empty()
+        var formData = new FormData($("#dLchaxun")[0]);
+        $.ajax({
+            type: "POST",
+            url:'driverLicence/queryDL',
+            contentType: false, //必须，告诉jquery不要设置Content-Type请求头
+            processData: false, //必须，告诉jquery不要处理发送的数据
+            data:formData,
+            success: function (data) {
+
+                $(data).each(function(){
+                    var a ='<tr><td width="150">'+this.dlName+'</td>'+
+                        '<td width="150">'+this.dlType+'</td>'+
+                        '<td>'+this.dlPoint+'</td>'+
+                        '<td width="180">'+this.dlCity+'</td>'+
+                        '<td width="300">'+this.dlTel+'</td>'+
+                        '<td width="100" onclick="qiang(&quot;E690052&quot;)"><span id="CE690052">查看</span> </td></tr>'+
+                        '<tr><td id="bT136465" style="display:none" colspan="7"></td></tr>'
+
+
+                    $("#DLtbody").append(a)
+                })
+
+            },
+            error: function () {
+                alert("fail")
+            }
+        })
+    })
+
+    $("#carchaxun").submit(function () {
+        $("#CLtbody").empty()
+        var formData = new FormData($("#carchaxun")[0]);
+        $.ajax({
+            type: "POST",
+            url:'carDeal/queryCarDeal',
+            contentType: false, //必须，告诉jquery不要设置Content-Type请求头
+            processData: false, //必须，告诉jquery不要处理发送的数据
+            data:formData,
+            success: function (data) {
+
+                $(data).each(function(){
+                    var a ='<tr><td width="150">'+this.cdMM+'</td>'+
+                        '<td width="150">'+this.cdCarType+'</td>'+
+                        '<td>'+this.cdDetail+'</td>'+
+                        '<td width="120">'+this.cdCity+'</td>'+
+                        '<td width="300">'+this.cdTel+'</td>'+
+                        '<td width="100" onclick="qiang(&quot;E690052&quot;)"><span id="CE690052">查看</span> </td></tr>'+
+                        '<tr><td id="bT136465" style="display:none" colspan="7"></td></tr>'
+
+                    $("#CLtbody").append(a)
+                })
+
+            },
+            error: function () {
+                alert("fail")
+            }
+        })
+    })
+
+        $("#EIchaxun").submit(function () {
+            $("#EItbody").empty()
+            var formData = new FormData($("#EIchaxun")[0]);
+            $.ajax({
+                type: "POST",
+                url:'EI/queryEI',
+                contentType: false, //必须，告诉jquery不要设置Content-Type请求头
+                processData: false, //必须，告诉jquery不要处理发送的数据
+                data:formData,
+                success: function (data) {
+
+                    $(data).each(function(){
+                        var a ='<tr><td width="150">'+this.eiPost+'</td>'+
+                            '<td width="150">'+this.eiSalary+'</td>'+
+                            '<td>'+this.eiAge+'</td>'+
+                            '<td width="180">'+this.eiCompanyName+'</td>'+
+                            '<td width="300">'+this.eiCompanyAddress+'</td>'+
+                            '<td width="100" onclick="qiang(&quot;E690052&quot;)"><span id="CE690052">查看</span> </td></tr>'+
+                            '<tr><td id="bT136465" style="display:none" colspan="7"></td></tr>'
+                        $("#EItbody").append(a)
+                    })
+
+                },
+                error: function () {
+                    alert("fail")
+                }
+            })
+        })
+
+    $.post('driverLicence/listDL',null,function(data){
+
+        $(data).each(function(){
+            var a ='<tr><td width="150">'+this.dlName+'</td>'+
+                    '<td width="150">'+this.dlType+'</td>'+
+                    '<td>'+this.dlPoint+'</td>'+
+                    '<td width="180">'+this.dlCity+'</td>'+
+                    '<td width="300">'+this.dlTel+'</td>'+
+                    '<td width="100" onclick="qiang(&quot;E690052&quot;)"><span id="CE690052">查看</span> </td></tr>'+
+                    '<tr><td id="bT136465" style="display:none" colspan="7"></td></tr>'
+
+
+            $("#DLtbody").append(a)
+        })
+
+    })
+    $.post('carDeal/listCarDeal',null,function(data){
+
+        $(data).each(function(){
+            var a ='<tr><td width="150">'+this.cdMM+'</td>'+
+                '<td width="150">'+this.cdCarType+'</td>'+
+                '<td>'+this.cdDetail+'</td>'+
+                '<td width="120">'+this.cdCity+'</td>'+
+                '<td width="300">'+this.cdTel+'</td>'+
+                '<td width="100" onclick="qiang(&quot;E690052&quot;)"><span id="CE690052">查看</span> </td></tr>'+
+                '<tr><td id="bT136465" style="display:none" colspan="7"></td></tr>'
+
+            $("#CLtbody").append(a)
+        })
+
+
+    })
+    $.post('EI/listEI',null,function(data){
+
+        $(data).each(function(){
+            var a ='<tr><td width="150">'+this.eiPost+'</td>'+
+                '<td width="150">'+this.eiSalary+'</td>'+
+                '<td>'+this.eiAge+'</td>'+
+                '<td width="180">'+this.eiCompanyName+'</td>'+
+                '<td width="300">'+this.eiCompanyAddress+'</td>'+
+                '<td width="100" onclick="qiang(&quot;E690052&quot;)"><span id="CE690052">查看</span> </td></tr>'+
+                '<tr><td id="bT136465" style="display:none" colspan="7"></td></tr>'
+            $("#EItbody").append(a)
+        })
+
+
+    })
+    $("#carForm").submit(function(){
+        var formData = new FormData($("#carForm")[0]);
+        $.ajax({
+            type: "POST",
+            url:'carDeal/addCarDeal',
+            contentType: false, //必须，告诉jquery不要设置Content-Type请求头
+            processData: false, //必须，告诉jquery不要处理发送的数据
+            data:formData,
+            success: function (data) {
+                alert("发布成功")
+                location.href=("line interaction.html")
+            },
+            error: function (data) {
+                alert("fail")
+            }
+        })
+    })
+    $("#dlForm").submit(function(){
+        var formData = new FormData($("#dlForm")[0]);
+        $.ajax({
+            type: "POST",
+            url:'driverLicence/addDL',
+            contentType: false, //必须，告诉jquery不要设置Content-Type请求头
+            processData: false, //必须，告诉jquery不要处理发送的数据
+            data:formData,
+            success: function (data) {
+                alert("发布成功")
+                location.href=("line interaction.html")
+            },
+            error: function (data) {
+                alert("fail")
+            }
+        })
+    })
+    $("#infoForm").submit(function(){
+        var formData = new FormData($("#infoForm")[0])
+
+        $.ajax({
+            type: "POST",
+            url:'EI/addEI',
+            contentType: false, //必须，告诉jquery不要设置Content-Type请求头
+            processData: false, //必须，告诉jquery不要处理发送的数据
+            data:formData,
+            success: function (data) {
+                alert("发布成功")
+                location.href=("line interaction.html")
+            },
+            error: function (data) {
+                alert("fail")
+            }
+        })
+    })
     var app_url ='';
-    $(document).ready(function(){	
+    $(document).ready(function(){
 
 	       $.post(app_url+"goods/",{num:0,type:8},function(data){
 				if(data.resid){
 						  $('#demo1').html(data.msg);
 					}
 				},'json');
-			
+
 		    $.post(app_url+"goods_count/",{},function(data){
 			if(data.resid){
-				      $('#zxhz').html(data.msg);	
+				      $('#zxhz').html(data.msg);
 					  $('#zxcy').html(data.msgs);
 				}
 			},'json');
 
-		});  
+		});
 
     function setTab(name,cursel,n){
 		for(i=1;i<=n;i++){
@@ -1152,32 +1309,17 @@
 	$(function(){
       $('.denglu').click(function(){
            $('.head').toggle();
-		   
-		   
-	    });   
+
+
+	    });
 	  $('.guanbi').click(function(){
            $('.head').hide();
 	    });
 	 $('.guanbi1').click(function(){
            $('.header').hide();
 	    });
-      $('.chaxun').click(function(){
-           var  search_begincity = $('#search_begincity').val();
-		   var  search_endcity = $('#search_endcity').val();
-		   if(search_begincity.length <= 0 &&search_endcity.length <= 0 ){
-			    $('#demo1').show().html("<div style='font-size:12px; color:#50B1E3; line-height:24px; padding-left:20px;'>请输入出发城市或到达城市！</div>");
-				return false;
-			}
-		   
-		   var  type = $('#type').val();
-		    $.post(app_url+"goods/",{num:0,type:type,search_begincity:search_begincity,search_endcity:search_endcity},function(data){
-				if(data.resid){
-						  $('#demo1').html(data.msg);
-					}
-				},'json');
-	   
-	    });
-		
+
+
 		$('#huo1').click(function(){
 			$.post(app_url+"goods/",{num:0,type:8},function(data){
 			if(data.resid){
@@ -1186,12 +1328,12 @@
 			},'json');
 
 		});
-		
+
 		$('#huo2').click(function(){
 			var num = 0;
 			$.post(app_url+"carlist/",{type:6},function(data){
 				if(data.resid){
-				    $('#demo2').html(data.msg);	
+				    $('#demo2').html(data.msg);
 
 					}
 				},'json');
@@ -1200,7 +1342,7 @@
 			var num = 0;
 			$.post(app_url+"goods/",{type:1,num:0},function(data){
 				if(data.resid){
-				    $('#demo3').html(data.msg);	
+				    $('#demo3').html(data.msg);
 
 					}
 				},'json');
@@ -1209,7 +1351,7 @@
 			var num = 0;
 			$.post(app_url+"carlist/",{type:1},function(data){
 				if(data.resid){
-				    $('#demo4').html(data.msg);	
+				    $('#demo4').html(data.msg);
 
 					}
 				},'json');
@@ -1218,7 +1360,7 @@
 			var num = 0;
 			$.post(app_url+"carlist/",{type:2},function(data){
 				if(data.resid){
-				    $('#demo5').html(data.msg);	
+				    $('#demo5').html(data.msg);
 
 					}
 				},'json');
@@ -1227,23 +1369,23 @@
 			var num = 0;
 			$.post(app_url+"goods/",{num:0,type:2},function(data){
 				if(data.resid){
-				    $('#demo6').html(data.msg);	
+				    $('#demo6').html(data.msg);
 
 					}
 				},'json');
-		});		
+		});
 
-		$('input').focus(function(){  
+		$('input').focus(function(){
 		   $(this).attr('placeholder','');
-		})	
-		$('.tp_bk_1').mouseover(function(){  	   
-				 $(this).attr('class','tp_bk'); 
+		})
+		$('.tp_bk_1').mouseover(function(){
+				 $(this).attr('class','tp_bk');
 		});
-		
-       	$('.tp_bk_1').mouseout(function(){  
-             $(this).attr('class','tp_bk_1'); 
+
+       	$('.tp_bk_1').mouseout(function(){
+             $(this).attr('class','tp_bk_1');
 		});
-		   
+
 		$('input').blur(function(){
 			 var numb = $("#mobile").val();
 			 var verify = $("#verify").val();
@@ -1261,15 +1403,15 @@
 			 }
 			 if(verify == ''){
 				$("#verify").attr('placeholder','请输入验证码');
-			 } 
+			 }
 			 if(goodstype == ''){
 				$("#goodstype").attr('placeholder','例：化肥，40吨，需高栏车，长度9.60，1辆，80元');
-			 } 
+			 }
 		});
-		
+
 
 		$('.btnLogin,#btnLogin').click(function(){
-   
+
 			var mobileno = $('#mobileno').val();
 			var begincity = $('#begincity').val();
 			var endcity = $('#endcity').val();
@@ -1279,8 +1421,8 @@
 			var goodstype = $('#goodstype').val();
 			var yan_code = $('#yan_code').val();
 			var verify = $('#car_verify').val();
-             
-		   
+
+
 			if(begincity.length <= 0){
 			    $('.begincity').show();
 				$('#begincity').focus();
@@ -1295,7 +1437,7 @@
 			}else{
 			    $('.endcity').hide();
 			}
-			
+
 			if(goodstype.length <= 0){
 			    $('.goodstype').show().html("货物名称不能为空");
 				$('#goodstype').focus();
@@ -1320,7 +1462,7 @@
 			}else{
 			    $('.yan_code').hide();
 			}
-			
+
 
 			if(verify.length != 4){
 			    $('.ve_rify').show();
@@ -1337,33 +1479,33 @@
 					//$('#items_denglu').html(denglu);
 				}else if(data.resid==2){
 				    $('.mobileno').show().html(data.msg);
-					
+
 				}else{
 				    $('.mobileno').show().html(data.msg);
-					
+
 				}
 			},'json');
-			
-			 var wait=100; 
+
+			 var wait=100;
              time(this);
-			 function time(o) { 
-                if (wait == 0) { 
-                    o.removeAttribute("disabled");           
-                    o.value="发布货源"; 
-                    wait = 100; 
-                } else { 
-                    o.setAttribute("disabled", true); 
-                    o.value=wait+"秒可再次发货"; 
-                    wait--; 
-                    setTimeout(function() { 
-                        time(o) 
-                    }, 
-                    1000) 
-                } 
+			 function time(o) {
+                if (wait == 0) {
+                    o.removeAttribute("disabled");
+                    o.value="发布货源";
+                    wait = 100;
+                } else {
+                    o.setAttribute("disabled", true);
+                    o.value=wait+"秒可再次发货";
+                    wait--;
+                    setTimeout(function() {
+                        time(o)
+                    },
+                    1000)
+                }
                }
-			
+
 		});
-		
+
  	$('.car_btnLogin').click(function(){
 			var mobileno = $('#car_mobileno').val();
 			var begincity = $('#car_begincity').val();
@@ -1391,7 +1533,7 @@
 			}else{
 			      $('.city').hide();
 			}
-			
+
 			if(weight.length > 5){
 				$('.weight').show().html("重量填写过大");
 				$('#weight').focus();
@@ -1413,21 +1555,21 @@
 			}else{
 			    $('.runtime').hide();
 			}
-			
-			
+
+
 			if(mobileno.length != 11){
 				$('.header').show();
 				$('#car_mobileno').attr("value",mob);
 				$('#btnLogin').attr("id","");
 				return false;
-			}	
-			
+			}
+
 			if(verify.length != 4){
 				$('.yz_ts').show().html('请输入正确验证码!');
 				$('#car_verify').focus();
 				return false;
-			}	
-						
+			}
+
 			$.post(app_url+"car_send/",{mobileno:mobileno,begincity:begincity,endcity:endcity,verify:verify,cartype:cartype,car_num:car_num,carlength:carlength,weight:weight,weight_unit:weight_unit,volume:volume,runtime:runtime,ips:"61.52.245.52"},function(data){
 				if(data.resid==1){
 					$('.header').hide();
@@ -1438,11 +1580,11 @@
 				}else{
 				    $('.yz_ts').show().html(data.msg);
 					$('.runtime').show().html(data.msg);
-					
+
 				}
 			},'json');
 		});
-		
+
 		$('.dl_btnLogin').click(function(){
 			var mobile = $('#dl_mobileno').val();
 			var verify  = $('#dl_verify').val();
@@ -1463,27 +1605,27 @@
 					$('.head').hide();
 					window.location.href=app_url;
 					$('.denglu').append(data.msg);
-					 
+
 				}else{
 					$('.dl_yz_ts').show().html(data.msg);
 				}
 			},'json');
-		 
-		 });	
-		
 
-	
+		 });
+
+
+
 })
-	function gb(){ 
-		$('#tc').hide();	
-		window.location.href=app_url;	
-	}	
+	function gb(){
+		$('#tc').hide();
+		window.location.href=app_url;
+	}
 
     function qiang(billno){
-	
+
            	$.post(app_url+"car_bill_qiang/",{billno:billno},function(data){
 				if(data.resid==2){
-				   
+
 					$('#A' + billno).show().html(data.msg);
                     $('#C' + billno).show().html("已接单");
 
@@ -1491,12 +1633,12 @@
 					$('#A' + billno).show().html(data.msg);
 				}
 			},'json');
-		 
-	//	$('#A' + billno).html('<div class="main_4_1">车主电话:15510686838</div><div class="main_4_2"><a>拨号</a></div>');		
+
+	//	$('#A' + billno).html('<div class="main_4_1">车主电话:15510686838</div><div class="main_4_2"><a>拨号</a></div>');
 	}
-	
+
 	function yuding(billno){
-	
+
            	$.post(app_url+"getcarsdetail/",{billno:billno},function(data){
 				if(data){
 
@@ -1505,12 +1647,12 @@
 
 				}
 			},'json');
-		 
-	//	$('#A' + billno).html('<div class="main_4_1">车主电话:15510686838</div><div class="main_4_2"><a>拨号</a></div>');		
+
+	//	$('#A' + billno).html('<div class="main_4_1">车主电话:15510686838</div><div class="main_4_2"><a>拨号</a></div>');
 	}
-	
+
 	function carsdetail(billno){
-	
+
            	$.post(app_url+"carsdetail/",{billno:billno},function(data){
 				if(data){
 
@@ -1518,24 +1660,24 @@
 
 				}
 			},'json');
-		 
-	//	$('#A' + billno).html('<div class="main_4_1">车主电话:15510686838</div><div class="main_4_2"><a>拨号</a></div>');		
-	}	
-	
+
+	//	$('#A' + billno).html('<div class="main_4_1">车主电话:15510686838</div><div class="main_4_2"><a>拨号</a></div>');
+	}
+
 
 	function show(billno){
-	 
+
            	$.post(app_url+"goods_qiang/",{bill:billno},function(data){
 				if(data.qianlist){
 					$('#add'+billno).toggle().html(data.qianlist);
 				}else{
 				    $('#add'+billno).toggle().html(data.msg);
-					
+
 				}
 			},'json');
-	}	
-	
-	
+	}
+
+
 
 	function msn(){
 		var mobile = $('#car_mobileno').val();
@@ -1548,12 +1690,12 @@
         $.post(app_url+"msn/",{mobile:mobile,yan_code:yan_code},function(data){
 			if(data.resid==3){
 				$('.yz_ts').show().html(data.msg);
-			}else{	
+			}else{
 				$('.yz_ts').show().html(data.msg);
 			}
 		},'json');
 	}
-	
+
 		function dl_msn(){
 		var mobile = $('#dl_mobileno').val();
 		var yan_code = $('#dl_code').val();
@@ -1565,7 +1707,7 @@
         $.post(app_url+"msn/",{mobile:mobile,yan_code:yan_code},function(data){
 			if(data.resid==3){
 				$('.dl_yz_ts').show().html(data.msg);
-			}else{	
+			}else{
 				$('.dl_yz_ts').show().html(data.msg);
 			}
 		},'json');
