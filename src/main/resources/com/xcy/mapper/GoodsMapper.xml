@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xcy.mapper.GoodsMapper">
+    <sql id="goodsSql">
+        select g.*,u.userRealName from goods g,user u
+    </sql>
+    <sql id="truckSql">
+        select t.*,u.userRealName from truck t,user u
+    </sql>
+    <sql id="whereSql">
+        <where>
+            and t.userId = u.userId
+            <if test="startCity != null and startCity !=''">
+                and startCity = #{startCity}
+            </if>
+            <if test="endCity != null and endCity !=''">
+                and endCity = #{endCity}
+            </if>
+            <if test="truckType != null and truckType !=''">
+                and truckType = #{truckType}
+            </if>
+            <if test="length != null and length !=''">
+                and length = #{length}
+            </if>
+        </where>
+    </sql>
+    <sql id="whereSql2">
+        <where>
+            and g.userId = u.userId
+            <if test="startCity != null and startCity !=''">
+                and startCity = #{startCity}
+            </if>
+            <if test="endCity != null and endCity !=''">
+                and endCity = #{endCity}
+            </if>
+            <if test="truckType != null and truckType !=''">
+                and truckType = #{truckType}
+            </if>
+            <if test="length != null and length !=''">
+                and length = #{length}
+            </if>
+        </where>
+    </sql>
+    <insert id="announceaTruck" parameterType="Truck">
+        insert into truck(startCity,endCity,truckType,size,length,truckNum,truckPhone,startTime,userId)
+        values (#{startCity},#{endCity},#{truckType},#{size},#{length},#{truckNum},#{truckPhone},#{startTime},#{userId})
+    </insert>
+    <insert id="announceaGoods" parameterType="Goods">
+        insert into goods(startCity,detailedStartAdress,endCity,detailEndAdress,goodsName,size,length,truckType,truckNum,price,sendGoodsPhone,getGoodsPhone,createTime,userId)
+        values (#{startCity},#{detailedStartAdress},#{endCity},#{detailEndAdress},#{goodsName},#{size},#{length},#{truckType},#{truckNum},#{price},#{sendGoodsPhone},#{getGoodsPhone},#{createTime},#{userId})
+    </insert>
+    <select id="selectTruckByContion" parameterType="Truck" resultType="Truck">
+        <include refid="truckSql"></include>
+        <include refid="whereSql"></include>
+    </select>
+    <select id="selectGoodsByContion" parameterType="Goods" resultType="Goods">
+        <include refid="goodsSql"></include>
+        <include refid="whereSql2"></include>
+    </select>
+    <select id="selectGoodsById" parameterType="int" resultType="Goods">
+        select * from goods where id = #{id}
+    </select>
+    <select id="selectTruckById" parameterType="int" resultType="Truck">
+        select * from truck where id = #{id}
+    </select>
+    <delete id="deleteTruckById" parameterType="int">
+        delete from truck where id = #{id}
+    </delete>
+    <delete id="deleteGoodsById" parameterType="int">
+        delete from goods where id = #{id}
+    </delete>
+    <select id="selectGoodsByMyId" parameterType="int" resultType="Goods">
+        select * from goods where userId = #{id}
+    </select>
+    <select id="selectTruckByMyId" parameterType="int" resultType="Truck">
+        select * from truck where userId = #{id}
+    </select>
+</mapper>
