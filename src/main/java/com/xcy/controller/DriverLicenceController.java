@@ -33,7 +33,7 @@ public class DriverLicenceController {
 
     @RequestMapping(value = "queryDL",method = RequestMethod.POST)
     public List<DriverLicence> queryDL(DriverLicence driverLicence){
-        System.out.println(driverLicence);
+
 
         List<DriverLicence> driverLicenceList = driverLicenceService.queryDL(driverLicence);
         return driverLicenceList;
