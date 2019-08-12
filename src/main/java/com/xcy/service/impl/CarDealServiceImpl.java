@@ -1,5 +1,6 @@
 package com.xcy.service.impl;
 
+import com.github.pagehelper.PageHelper;
 import com.xcy.mapper.CarDealMapper;
 import com.xcy.pojo.CarDeal;
 import com.xcy.service.CarDealService;
@@ -27,4 +28,6 @@ public class CarDealServiceImpl implements CarDealService {
     public List<CarDeal> queryCarDeal(CarDeal carDeal) {
         return carDealMapper.queryCarDeal(carDeal);
     }
+
+
 }

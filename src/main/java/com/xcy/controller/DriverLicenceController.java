@@ -33,7 +33,12 @@ public class DriverLicenceController {
 
     @RequestMapping(value = "queryDL",method = RequestMethod.POST)
     public List<DriverLicence> queryDL(DriverLicence driverLicence){
-
+        if(driverLicence.getDlCity()=="请选择"){
+            driverLicence.setDlCity("");
+            if(driverLicence.getDlType()=="请选择"){
+                driverLicence.setDlType("");
+            }
+        }
 
         List<DriverLicence> driverLicenceList = driverLicenceService.queryDL(driverLicence);
         return driverLicenceList;

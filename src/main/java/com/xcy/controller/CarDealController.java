@@ -5,9 +5,7 @@ import com.xcy.pojo.CarDeal;
 import com.xcy.service.CarDealService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
@@ -28,6 +26,7 @@ public class CarDealController {
     String imageUrl;
     @Autowired
     CarDealService carDealService;
+
 
     @RequestMapping(value = "addCarDeal",method = RequestMethod.POST)
     public String addCarDeal(CarDeal carDeal, MultipartFile fileUpload) throws IOException {
@@ -60,6 +59,12 @@ public class CarDealController {
     @RequestMapping(value = "queryCarDeal",method = RequestMethod.POST)
     public List<CarDeal> queryCarDeal(String cdMM,String cdCarType,String cdCity){
         CarDeal carDeal = new CarDeal();
+        if(cdCarType=="请选择"){
+            carDeal.setCdCarType("");
+        }
+        if(cdCity=="请选择"){
+            carDeal.setCdCity("");
+        }
         if(cdMM != null && cdMM !=""){
             carDeal.setCdMM(cdMM);
         }
@@ -73,4 +78,7 @@ public class CarDealController {
         List<CarDeal> carDeals = carDealService.queryCarDeal(carDeal);
         return carDeals;
     }
+
+
+
 }

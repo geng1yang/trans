@@ -13,4 +13,7 @@ public interface CarDealService {
     List<CarDeal> listCarDeal();
 
     List<CarDeal> queryCarDeal(CarDeal carDeal);
+
+
+
 }

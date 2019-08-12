@@ -136,11 +136,12 @@
                   </ul>
                   <div class="clear"></div>
                   <div class="new_cy list_huo1">
+                      <form id="dlchaxun" onsubmit="return false">
                       <ul class="tab_div_ul">
                           <li>
                               <label>所在城市</label>
                               <div class="list_div area-wraper">
-                                  <input class="list_select" autocomplete="off" id="search_endcity" name="search_endcity" placeholder="" type="text">
+                                  <input class="list_select" autocomplete="off" id="search_endcity" name="dlCity" placeholder="" type="text">
                                   <span style="display: none;" class="area-select area-tab">
                                       <ul class="h">
                                           <li tabindex="0" class="s-tab-t current"><span class="inner" index="0">常用</span></li>
@@ -234,12 +235,12 @@
                                       <div style="display: none;" index="3" class="s-tab-b"></div>
                                       <div class="c"></div>
                                   </span>
-                                  <input id="type" name="type" value="8" placeholder="" type="hidden">
+<!--                                  <input id="type" name="type" value="8" placeholder="" type="hidden">-->
                               </div>
                               <div class="chaxun_3 area-wraper">
                                  <div class="list_div">
                                     驾照类型&nbsp;
-                                    <select name="cartype" class="list_type" style="text-align:center;">
+                                    <select name="dlType" class="list_type" style="text-align:center;">
                                         <option value="请选择" selected>请选择</option>
                                         <option value="A1">A1</option>
                                         <option value="A2">A2</option>
@@ -259,19 +260,21 @@
                                     </select>
                                  </div>
                               </div>
-                              <div class="new_tab_bottom">
-                                  <a href="javascript:;" class="chaxun">搜索</a>
-                              </div>
+                              <div class="new_tab_bottom"> <div class="_box">
+                                  <input type="submit"  />
+                              </div> </div>
                           </li>
                       </ul>
+                      </form>
                   </div>
                   <div class="new_cy list_huo2" style="display:none;">
+                      <form id="carchaxun" onsubmit="return false">
                       <ul class="tab_div_ul">
                              <li>
                              	<div class="chaxun_3 area-wraper" style="margin-left:30px;">
                                  <div class="list_div">
                                     我要&nbsp;
-                                    <select name="cartype" class="list_type">
+                                    <select name="cdMM" class="list_type">
                                         <option value="请选择" selected>请选择</option>
                                         <option value="买车">买车</option>
                                         <option value="卖车">卖车</option>
@@ -280,7 +283,7 @@
                               </div>
                               <label>所在城市</label>
                               <div class="list_div area-wraper">
-                                  <input class="list_select" autocomplete="off" id="search_endcity" name="search_endcity" placeholder="" type="text">
+                                  <input class="list_select" autocomplete="off" id="search_endcity" name="cdCity" placeholder="" type="text">
                                   <span style="display: none;" class="area-select area-tab">
                                       <ul class="h">
                                           <li tabindex="0" class="s-tab-t current"><span class="inner" index="0">常用</span></li>
@@ -378,39 +381,30 @@
                               </div>
                               <div class="chaxun_3 area-wraper">
                                  <div class="list_div">
-                                    驾照类型&nbsp;
-                                    <select name="cartype" class="list_type" style="text-align:center;">
-                                        <option value="请选择" selected>请选择</option>
-                                        <option value="A1">A1</option>
-                                        <option value="A2">A2</option>
-                                        <option value="A3">A3</option>
-                                        <option value="B1">B1</option>
-                                        <option value="B2">B2</option>
-                                        <option value="C1">C1</option>
-                                        <option value="C2">C2</option>
-                                        <option value="C3">C3</option>
-                                        <option value="C4">C4</option>
-                                        <option value="D">D</option>
-                                        <option value="E">E</option>
-                                        <option value="F">F</option>
-                                        <option value="M">M</option>
-                                        <option value="N">N</option>
-                                        <option value="P">P</option>
-                                    </select>
+                                    车辆类型&nbsp;
+                                     <select name="cdCarType" id="cartype" class="list_type" style=" width:130px;">
+                                         <option value="请选择" selected>请选择</option>
+                                         <option value="高栏车">高栏车</option>
+                                         <option value="标箱车">标箱车</option>
+                                         <option value="平板车">平板车</option>
+                                         <option value="其他">其他</option>
+                                     </select>
                                  </div>
                               </div>
-                              <div class="new_tab_bottom">
-                                  <a href="javascript:;" class="chaxun">搜索</a>
-                              </div>
+                                 <div class="new_tab_bottom"> <div class="_box">
+                                     <input type="submit" />
+                                 </div> </div>
                           </li>
                       </ul>
+                      </form>
                   </div>
                   <div class="new_cy list_huo3" style="display:none;">
+                      <form id="EIchaxun" onsubmit="return false">
                   	   <ul class="tab_div_ul">
                            <li>
                               <div class="list_div">
                                   招聘岗位&nbsp;
-                                  <select name="cartype" class="list_type">
+                                  <select name="eiPost" class="list_type">
                                       <option value="请选择" selected>请选择</option>
                                       <option value="司机">司机</option>
                                       <!--<option value=""></option>-->
@@ -418,7 +412,7 @@
                               </div>
                               <label>所在城市</label>
                               <div class="list_div area-wraper">
-                                  <input class="list_select" autocomplete="off" id="search_endcity" name="search_endcity" placeholder="" type="text">
+                                  <input class="list_select" autocomplete="off" id="search_endcity" name="eiCompanyAddress" placeholder="" type="text">
                                   <span style="display: none;" class="area-select area-tab">
                                       <ul class="h">
                                           <li tabindex="0" class="s-tab-t current"><span class="inner" index="0">常用</span></li>
@@ -514,11 +508,12 @@
                                   </span>
                                   <input id="type" name="type" value="8" placeholder="" type="hidden">
                               </div>
-                              <div class="new_tab_bottom">
-                                  <a href="javascript:;" class="chaxun">搜索</a>
-                              </div>
+                               <div class="new_tab_bottom"> <div class="_box">
+                                   <input type="submit" />
+                               </div> </div>
                           </li>
                       </ul>
+                      </form>
                   </div>
                   <!--驾照分数-->
                   <div class="list_huo1">
@@ -538,97 +533,8 @@
                           </tbody>
                       </table>
                       <table class="hy_list" id="demo1" border="0" width="1000">
-                          <tbody>
-                              <tr>
-                                  <td class="list_ddh" style="width:155px;">
-                                      <div class="list_ddh_div">
-                                          <div class="list_ddh_left" style="background-image:url(images/huiyuan.png); background-size:100%"></div>
-                                          <div class="list_ddh_right">
-                                              <p>易平立</p>
-                                          </div>
-                                          <div class="clear"></div>
-                                      </div>
-                                  </td>
-                                  <td class="list_yslx" style="width:155px;">
-                                      <p><span>C1</p>
-                                  </td>
-                                  <td class="list_hwms" style="width:155px;">12</td>
-                                  <td class="list_jgyx" style="width:155px;">郑州</td>
-                                  <td class="list_fbsj" style="width:155px;">182XXXXXXXX</td>
-                                  <td class="list_jd list_fh" style="width:155px;"><a href="javascript:;">查看</a></td>
-                              </tr>
-                              <tr>
-                                  <td class="list_ddh" style="width:155px;">
-                                      <div class="list_ddh_div">
-                                          <div class="list_ddh_left" style="background-image:url(images/huiyuan.png); background-size:100%"></div>
-                                          <div class="list_ddh_right">
-                                              <p>易平立</p>
-                                          </div>
-                                          <div class="clear"></div>
-                                      </div>
-                                  </td>
-                                  <td class="list_yslx" style="width:155px;">
-                                      <p><span>C1</p>
-                                  </td>
-                                  <td class="list_hwms" style="width:155px;">12</td>
-                                  <td class="list_jgyx" style="width:155px;">郑州</td>
-                                  <td class="list_fbsj" style="width:155px;">182XXXXXXXX</td>
-                                  <td class="list_jd list_fh" style="width:155px;"><a href="javascript:;">查看</a></td>
-                              </tr>
-                              <tr>
-                                  <td class="list_ddh" style="width:155px;">
-                                      <div class="list_ddh_div">
-                                          <div class="list_ddh_left" style="background-image:url(images/huiyuan.png); background-size:100%"></div>
-                                          <div class="list_ddh_right">
-                                              <p>易平立</p>
-                                          </div>
-                                          <div class="clear"></div>
-                                      </div>
-                                  </td>
-                                  <td class="list_yslx" style="width:155px;">
-                                      <p><span>C1</p>
-                                  </td>
-                                  <td class="list_hwms" style="width:155px;">12</td>
-                                  <td class="list_jgyx" style="width:155px;">郑州</td>
-                                  <td class="list_fbsj" style="width:155px;">182XXXXXXXX</td>
-                                  <td class="list_jd list_fh" style="width:155px;"><a href="javascript:;">查看</a></td>
-                              </tr>
-                              <tr>
-                                  <td class="list_ddh" style="width:155px;">
-                                      <div class="list_ddh_div">
-                                          <div class="list_ddh_left" style="background-image:url(images/huiyuan.png); background-size:100%"></div>
-                                          <div class="list_ddh_right">
-                                              <p>易平立</p>
-                                          </div>
-                                          <div class="clear"></div>
-                                      </div>
-                                  </td>
-                                  <td class="list_yslx" style="width:155px;">
-                                      <p><span>C1</p>
-                                  </td>
-                                  <td class="list_hwms" style="width:155px;">12</td>
-                                  <td class="list_jgyx" style="width:155px;">郑州</td>
-                                  <td class="list_fbsj" style="width:155px;">182XXXXXXXX</td>
-                                  <td class="list_jd list_fh" style="width:155px;"><a href="javascript:;">查看</a></td>
-                              </tr>
-                              <tr>
-                                  <td class="list_ddh" style="width:155px;">
-                                      <div class="list_ddh_div">
-                                          <div class="list_ddh_left" style="background-image:url(images/huiyuan.png); background-size:100%"></div>
-                                          <div class="list_ddh_right">
-                                              <p>易平立</p>
-                                          </div>
-                                          <div class="clear"></div>
-                                      </div>
-                                  </td>
-                                  <td class="list_yslx" style="width:155px;">
-                                      <p><span>C1</p>
-                                  </td>
-                                  <td class="list_hwms" style="width:155px;">12</td>
-                                  <td class="list_jgyx" style="width:155px;">郑州</td>
-                                  <td class="list_fbsj" style="width:155px;">182XXXXXXXX</td>
-                                  <td class="list_jd list_fh" style="width:155px;"><a href="javascript:;">查看</a></td>
-                              </tr>
+                          <tbody id="DLtbody">
+
                           </tbody>
                       </table>
                       <div class="list_more" id="getmore1">更多»</div>
@@ -653,43 +559,8 @@
                           </tbody>
                       </table>
                       <table class="hy_list" id="demo2" border="0" width="1000">
-                      	  <tbody>
-                          	  <tr>
-                                  <td class="list_ddh">卖家</td>
-                                  <td class="list_yslx">
-                                      <p><span>C1</p>
-                                  </td>
-                                  <td class="list_fbsj">车辆描述车辆描述车辆描述车辆描述</td>
-                                  <td class="list_hwms">郑州</td>
-                                  <td class="list_jgyx">2012-02-12</td>
-                                  <td class="list_fbsj">4.2米</td>
-                                  <td class="list_fbsj"><img src="images/eee.jpg" alt="车辆图片展示"></td>
-                                  <td class="list_jd list_fh" id="yincang">
-                                  	  <a id="CE694431">查看</a>
-                                      <div class="text" style="display:none; width:200px; height:40px; line-height:40px; position:absolute; background:#eaeaea; text-align:center;">
-                                          <span>联系电话：</span>
-                                          <span>182XXXXXXXX</span>
-                                      </div>
-                                  </td>
-                              </tr>
-                              <tr>
-                                  <td class="list_ddh">卖家</td>
-                                  <td class="list_yslx">
-                                      <p><span>C1</p>
-                                  </td>
-                                  <td class="list_fbsj">车辆描述车辆描述车辆描述车辆描述</td>
-                                  <td class="list_hwms">郑州</td>
-                                  <td class="list_jgyx">2012-02-12</td>
-                                  <td class="list_fbsj">4.2米</td>
-                                  <td class="list_fbsj"><img src="images/eee.jpg" alt="车辆图片展示"></td>
-                                  <td class="list_jd list_fh" id="yincang">
-                                  	  <a id="CE694431">查看</a>
-                                      <div class="text" style="display:none; width:200px; height:40px; line-height:40px; position:absolute; background:#eaeaea; text-align:center;">
-                                        	<span>联系电话：</span>
-                                            <span>182XXXXXXXX</span>
-                                        </div>
-                                  </td>
-                              </tr>
+                      	  <tbody id="CLtbody">
+
                           </tbody>
                       </table>
                       <div class="list_more" id="getmore2">更多»</div>
@@ -713,22 +584,8 @@
                           </tbody>
                       </table>
                       <table border="0" width="1000" class="hy_list" id="demo3">
-                      	  <tbody>
-                              <tr>
-                                  <td class="list_ddh">货车司机</td>
-                                  <td class="list_yslx">郑州智坤科技</td>
-                                  <td class="list_hwms">3000</td>
-                                  <td class="list_jgyx" style="width:150px;">河南省-郑州市-金水区</td>
-                                  <td class="list_fbsj">40~50</td>
-                                  <td class="list_fbsj" style="width:170px;">技术娴熟，没有出过交通事故</td>
-							      <td class="list_jd list_fh">
-                                  	  <a id="yincang">查看</a>
-                                      <div class="text" style="display:none; width:200px; height:40px; line-height:40px; position:absolute; background:#eaeaea; text-align:center;">
-                                          <span>联系电话：</span>
-                                          <span>182XXXXXXXX</span>
-                                      </div>
-                                  </td>
-                              </tr>
+                      	  <tbody id="EItbody">
+
                           </tbody>
                       </table>
                       <div class="list_more" id="getmore2">更多»</div>
@@ -742,6 +599,206 @@
 </div>
 <!--显示隐藏js--> 
 <script type="text/javascript">
+
+    $("#dlchaxun").submit(function () {
+        $("#DLtbody").empty()
+        var formData = new FormData($("#dlchaxun")[0]);
+        $.ajax({
+            type: "POST",
+            url:'driverLicence/queryDL',
+            contentType: false, //必须，告诉jquery不要设置Content-Type请求头
+            processData: false, //必须，告诉jquery不要处理发送的数据
+            data:formData,
+            success: function (data) {
+
+                $(data).each(function(){
+                    var a ='<tr><td class="list_ddh" style="width:155px;"><div class="list_ddh_div">\n' +
+                        '                        <div class="list_ddh_left" style="background-image:url(images/huiyuan.png); background-size:100%"></div>\n' +
+                        '                        <div class="list_ddh_right">\n' +
+                        '                        <p>'+this.userRealName+'</p>\n' +
+                        '                        </div>\n' +
+                        '                        <div class="clear"></div>\n' +
+                        '                        </div>\n' +
+                        '                        </td>\n' +
+                        '                        <td class="list_yslx" style="width:155px;">\n' +
+                        '                        <p><span>'+this.dlType+'</p>\n' +
+                        '                        </td>\n' +
+                        '                        <td class="list_hwms" style="width:155px;">'+this.dlPoint+'</td>\n' +
+                        '                        <td class="list_jgyx" style="width:155px;">'+this.dlCity+'</td>\n' +
+                        '                        <td class="list_fbsj" style="width:155px;">'+this.dlTel+'</td>\n' +
+                        '                    <td class="list_jd list_fh" style="width:155px;"><a href="javascript:;">查看</a></td>\n' +
+                        '                    </tr>'
+
+
+                    $("#DLtbody").append(a)
+                })
+
+            },
+            error: function () {
+                alert("fail")
+            }
+        })
+    })
+
+    $("#carchaxun").submit(function () {
+        $("#CLtbody").empty()
+        var formData = new FormData($("#carchaxun")[0]);
+        $.ajax({
+            type: "POST",
+            url:'carDeal/queryCarDeal',
+            contentType: false, //必须，告诉jquery不要设置Content-Type请求头
+            processData: false, //必须，告诉jquery不要处理发送的数据
+            data:formData,
+            success: function (data) {
+
+                $(data).each(function(){
+                    var a ='<tr>\n' +
+                        '                        <td class="list_ddh">'+this.cdMM+'</td>\n' +
+                        '                        <td class="list_yslx">\n' +
+                        '                        <p><span>'+this.cdCarType+'</p>\n' +
+                        '                        </td>\n' +
+                        '                        <td class="list_fbsj">'+this.cdDetail+'</td>\n' +
+                        '                        <td class="list_hwms">'+this.cdCity+'</td>\n' +
+                        '                        <td class="list_jgyx">'+this.cdTime+'</td>\n' +
+                        '                        <td class="list_fbsj">'+this.cdCarLength+'</td>\n' +
+                        '                    <td class="list_fbsj"><img src="'+this.cdImg+'" alt="车辆图片展示"></td>\n' +
+                        '                        <td class="list_jd list_fh" id="yincang">\n' +
+                        '                        <a id="CE694431">查看</a>\n' +
+                        '                        <div class="text" style="display:none; width:200px; height:40px; line-height:40px; position:absolute; background:#eaeaea; text-align:center;">\n' +
+                        '                        <span>联系电话：</span>\n' +
+                        '                    <span>'+this.cdTel+'</span>\n' +
+                        '                    </div>\n' +
+                        '                    </td>\n' +
+                        '                    </tr>'
+
+
+
+                    $("#CLtbody").append(a)
+                })
+
+            },
+            error: function () {
+                alert("fail")
+            }
+        })
+    })
+
+    $("#EIchaxun").submit(function () {
+        $("#EItbody").empty()
+        var formData = new FormData($("#EIchaxun")[0]);
+        $.ajax({
+            type: "POST",
+            url:'EI/queryEI',
+            contentType: false, //必须，告诉jquery不要设置Content-Type请求头
+            processData: false, //必须，告诉jquery不要处理发送的数据
+            data:formData,
+            success: function (data) {
+
+                $(data).each(function(){
+                    var a ='<tr>\n' +
+                        '                        <td class="list_ddh">'+this.eiPost+'</td>\n' +
+                        '                        <td class="list_yslx">'+this.eiCompanyName+'</td>\n' +
+                        '                        <td class="list_hwms">'+this.eiSalary+'</td>\n' +
+                        '                        <td class="list_jgyx" style="width:150px;">'+this.eiCompanyAddress+'</td>\n' +
+                        '                        <td class="list_fbsj">'+this.eiAge+'</td>\n' +
+                        '                    <td class="list_fbsj" style="width:170px;">'+this.eiDetail+'</td>\n' +
+                        '                    <td class="list_jd list_fh">\n' +
+                        '                        <a id="yincang">查看</a>\n' +
+                        '                        <div class="text" style="display:none; width:200px; height:40px; line-height:40px; position:absolute; background:#eaeaea; text-align:center;">\n' +
+                        '                        <span>联系电话：</span>\n' +
+                        '                    <span>'+this.eiTel+'</span>\n' +
+                        '                    </div>\n' +
+                        '                    </td>\n' +
+                        '                    </tr>'
+                    $("#EItbody").append(a)
+                })
+
+            },
+            error: function () {
+                alert("fail")
+            }
+        })
+    })
+    $.post('driverLicence/listDL',null,function(data){
+
+        $(data).each(function(){
+            var a ='<tr><td class="list_ddh" style="width:155px;"><div class="list_ddh_div">\n' +
+                '                        <div class="list_ddh_left" style="background-image:url(images/huiyuan.png); background-size:100%"></div>\n' +
+                '                        <div class="list_ddh_right">\n' +
+                '                        <p>'+this.userRealName+'</p>\n' +
+                '                        </div>\n' +
+                '                        <div class="clear"></div>\n' +
+                '                        </div>\n' +
+                '                        </td>\n' +
+                '                        <td class="list_yslx" style="width:155px;">\n' +
+                '                        <p><span>'+this.dlType+'</p>\n' +
+                '                        </td>\n' +
+                '                        <td class="list_hwms" style="width:155px;">'+this.dlPoint+'</td>\n' +
+                '                        <td class="list_jgyx" style="width:155px;">'+this.dlCity+'</td>\n' +
+                '                        <td class="list_fbsj" style="width:155px;">'+this.dlTel+'</td>\n' +
+                '                    <td class="list_jd list_fh" style="width:155px;"><a href="javascript:;">查看</a></td>\n' +
+                '                    </tr>'
+
+
+
+
+            $("#DLtbody").append(a)
+        })
+
+    })
+    $.post('carDeal/listCarDeal',null,function(data){
+
+        $(data).each(function(){
+            var a ='<tr>\n' +
+                '                        <td class="list_ddh">'+this.cdMM+'</td>\n' +
+                '                        <td class="list_yslx">\n' +
+                '                        <p><span>'+this.cdCarType+'</p>\n' +
+                '                        </td>\n' +
+                '                        <td class="list_fbsj">'+this.cdDetail+'</td>\n' +
+                '                        <td class="list_hwms">'+this.cdCity+'</td>\n' +
+                '                        <td class="list_jgyx">'+this.cdTime+'</td>\n' +
+                '                        <td class="list_fbsj">'+this.cdCarLength+'</td>\n' +
+                '                    <td class="list_fbsj"><img src="'+this.cdImg+'" alt="车辆图片展示"></td>\n' +
+                '                        <td class="list_jd list_fh" id="yincang">\n' +
+                '                        <a id="CE694431">查看</a>\n' +
+                '                        <div class="text" style="display:none; width:200px; height:40px; line-height:40px; position:absolute; background:#eaeaea; text-align:center;">\n' +
+                '                        <span>联系电话：</span>\n' +
+                '                    <span>'+this.cdTel+'</span>\n' +
+                '                    </div>\n' +
+                '                    </td>\n' +
+                '                    </tr>'
+
+
+
+            $("#CLtbody").append(a)
+        })
+
+
+    })
+    $.post('EI/listEI',null,function(data){
+
+        $(data).each(function(){
+            var a ='<tr>\n' +
+                '                        <td class="list_ddh">'+this.eiPost+'</td>\n' +
+                '                        <td class="list_yslx">'+this.eiCompanyName+'</td>\n' +
+                '                        <td class="list_hwms">'+this.eiSalary+'</td>\n' +
+                '                        <td class="list_jgyx" style="width:150px;">'+this.eiCompanyAddress+'</td>\n' +
+                '                        <td class="list_fbsj">'+this.eiAge+'</td>\n' +
+                '                    <td class="list_fbsj" style="width:170px;">'+this.eiDetail+'</td>\n' +
+                '                    <td class="list_jd list_fh">\n' +
+                '                        <a id="yincang">查看</a>\n' +
+                '                        <div class="text" style="display:none; width:200px; height:40px; line-height:40px; position:absolute; background:#eaeaea; text-align:center;">\n' +
+                '                        <span>联系电话：</span>\n' +
+                '                    <span>'+this.eiTel+'</span>\n' +
+                '                    </div>\n' +
+                '                    </td>\n' +
+                '                    </tr>'
+            $("#EItbody").append(a)
+        })
+
+
+    })
+
 	var app_url ='';
 	function setTab2(name,cursel,n){
 	for(i=1;i<=n;i++){
