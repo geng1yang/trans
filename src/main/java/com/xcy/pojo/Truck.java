@@ -11,6 +11,14 @@ public class Truck {
     private String truckPhone;
     private String startTime;
     private int userId;
+    private String userRealName;
+    public String getUserRealName() {
+        return userRealName;
+    }
+
+    public void setUserRealName(String userRealName) {
+        this.userRealName = userRealName;
+    }
 
     public int getId() {
         return id;

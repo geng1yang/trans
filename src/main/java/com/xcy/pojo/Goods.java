@@ -1,6 +1,7 @@
 package com.xcy.pojo;
 
 public class Goods {
+    private int id;
     private String startCity;
     private String detailedStartAdress;
     private String endCity;
@@ -15,6 +16,23 @@ public class Goods {
     private String getGoodsPhone;
     private String createTime;
     private int userId;
+    private String userRealName;
+
+    public String getUserRealName() {
+        return userRealName;
+    }
+
+    public void setUserRealName(String userRealName) {
+        this.userRealName = userRealName;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getStartCity() {
         return startCity;
