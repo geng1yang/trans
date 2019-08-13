@@ -35,7 +35,12 @@ public class EmploymentInfoController {
 
     @RequestMapping(value = "queryEI",method = RequestMethod.POST)
     public List<EmpInfo> queryEI(EmpInfo empInfo){
-
+        if(empInfo.getEiPost()=="请选择"){
+            empInfo.setEiPost("");
+            if(empInfo.getEiCompanyAddress()=="请选择"){
+                empInfo.setEiCompanyAddress("");
+            }
+        }
         List<EmpInfo> empInfos = empInfoService.queryEI(empInfo);
         return empInfos;
     }

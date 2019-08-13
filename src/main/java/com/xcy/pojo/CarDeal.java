@@ -1,5 +1,7 @@
 package com.xcy.pojo;
 
+
+
 public class CarDeal {
     private Integer cdId;
 
