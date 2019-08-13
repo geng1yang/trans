@@ -42,6 +42,7 @@ public class CarDealController {
         File file = new File(targetName);
         if(!file.exists()){
             file.mkdirs();
+
         }
         fileUpload.transferTo(new File(targetName,newName));
 

@@ -5,7 +5,7 @@ import javax.xml.crypto.Data;
 public class Driveknowledge {
     private int dkId;
     private String dkTotal;
-    private Data dkCreateTime;
+    private String dkCreateTime;
 
     public int getDkId() {
         return dkId;
@@ -23,11 +23,11 @@ public class Driveknowledge {
         this.dkTotal = dkTotal;
     }
 
-    public Data getDkCreateTime() {
+    public String getDkCreateTime() {
         return dkCreateTime;
     }
 
-    public void setDkCreateTime(Data dkCreateTime) {
+    public void setDkCreateTime(String dkCreateTime) {
         this.dkCreateTime = dkCreateTime;
     }
 

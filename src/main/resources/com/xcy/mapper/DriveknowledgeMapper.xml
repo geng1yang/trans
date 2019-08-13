@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.xcy.mapper.DriveknowledgeMapper">
 
-    <select id="getdriveknowledgeList" parameterType="map">
+    <select id="getdriveknowledgeList" parameterType="map" resultType="driveknowledge">
          select * from driveknowledge
     </select>
 </mapper>

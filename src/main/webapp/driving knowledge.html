@@ -118,25 +118,9 @@
 <!--驾驶常识-开始-->
 <div class="main">
     <div id="nav" class="mt10"> 您当前位置：<a href="index.html">首页</a> &gt; <a href="driving knowledge.html">驾驶常识</a> &gt;正文</div>
-	<ul class="left">
-    	<li><a href="driving%20knowledge%20details.html">外交部回应“韩海军射击中国渔政船”</a><span>2015-12-09</span></li>
-        <li><a href="driving%20knowledge%20details.html">外交部回应“韩海军射击中国渔政船”</a><span>2015-12-09</span></li>
-        <li><a href="driving%20knowledge%20details.html">外交部回应“韩海军射击中国渔政船”</a><span>2015-12-09</span></li>
-        <li><a href="driving%20knowledge%20details.html">外交部回应“韩海军射击中国渔政船”</a><span>2015-12-09</span></li>
-        <li><a href="driving%20knowledge%20details.html">外交部回应“韩海军射击中国渔政船”</a><span>2015-12-09</span></li>
-        <li><a href="driving%20knowledge%20details.html">外交部回应“韩海军射击中国渔政船”</a><span>2015-12-09</span></li>
-        <li><a href="driving%20knowledge%20details.html">外交部回应“韩海军射击中国渔政船”</a><span>2015-12-09</span></li>
-        <li><a href="driving%20knowledge%20details.html">外交部回应“韩海军射击中国渔政船”</a><span>2015-12-09</span></li>
-        <li><a href="driving%20knowledge%20details.html">外交部回应“韩海军射击中国渔政船”</a><span>2015-12-09</span></li>
-        <li><a href="driving%20knowledge%20details.html">外交部回应“韩海军射击中国渔政船”</a><span>2015-12-09</span></li>
-        <li><a href="driving%20knowledge%20details.html">外交部回应“韩海军射击中国渔政船”</a><span>2015-12-09</span></li>
-        <li><a href="driving%20knowledge%20details.html">外交部回应“韩海军射击中国渔政船”</a><span>2015-12-09</span></li>
-        <li><a href="driving%20knowledge%20details.html">外交部回应“韩海军射击中国渔政船”</a><span>2015-12-09</span></li>
-        <li><a href="driving%20knowledge%20details.html">外交部回应“韩海军射击中国渔政船”</a><span>2015-12-09</span></li>
-        <li><a href="driving%20knowledge%20details.html">外交部回应“韩海军射击中国渔政船”</a><span>2015-12-09</span></li>
-        <li><a href="driving%20knowledge%20details.html">外交部回应“韩海军射击中国渔政船”</a><span>2015-12-09</span></li>
-        <li><a href="driving%20knowledge%20details.html">外交部回应“韩海军射击中国渔政船”</a><span>2015-12-09</span></li>
-        <li><a href="driving%20knowledge%20details.html">外交部回应“韩海军射击中国渔政船”</a><span>2015-12-09</span></li>
+	<ul class="left" >
+        <div id="ul1"></div>
+
         <div class="plist">
         	<ul>
             	<li><a href="">首页</a></li>
@@ -190,6 +174,17 @@
     </div>
     <div class="footer_bottom">Copyright © 2012-2015 新广货运联盟 版权所有 Power by www.dwuliu.com   ICP备14059919号-1号 </div>
 </div>
-<!--尾部-结束--> 
+<!--尾部-结束-->
+
+<script>
+
+    $.get('driveknowledgelList',null,function (data) {
+        $(data).each(function () {
+            var a = '<li><a href="driving%20knowledge%20details.html">'+this.dkTotal+'</a><span>'+this.dkCreateTime+'</span></li>'
+
+            $("#ul1").append(a)
+        })
+    })
+</script>
 </body>
 </html>

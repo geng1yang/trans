@@ -4,6 +4,15 @@ public class Driveknowledgedetail {
     private int dkdId;
     private String dkdDetail;
     private int dkId;
+    private String dkTotal;
+
+    public String getDkTotal() {
+        return dkTotal;
+    }
+
+    public void setDkTotal(String dkTotal) {
+        this.dkTotal = dkTotal;
+    }
 
     public int getDkdId() {
         return dkdId;
