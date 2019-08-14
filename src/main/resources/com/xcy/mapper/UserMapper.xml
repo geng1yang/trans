@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xcy.mapper.UserMapper">
+
+<select id="login" parameterType="com.xcy.pojo.User" resultType="int">
+    select count(1) from user where username=#{userPhone} and userPassword=#{userPassword}
+</select>
+
+<select id="isLogin" parameterType="com.xcy.pojo.User" resultType="int">
+    select id from user where userPhone=#{userPhone} and userPassword=#{userPassword}
+</select>
+
+<select id="validateUsername" parameterType="String" resultType="int">
+    select count(1)  from user where userPhone = #{userPhone}
+</select>
+
+<insert id="insertUser" parameterType="com.xcy.pojo.User" >
+    insert into user (userPhone,  userPassword, userRealName, userIdCard, userEmail, userCity, userTelNum)
+    values (#{userPhone}, #{userPassword}, #{userRealName}, #{userIdCard}, #{userEmail}, #{userCity}, #{userTelNum})
+</insert>
+
+
+</mapper>

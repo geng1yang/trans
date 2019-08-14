@@ -134,85 +134,13 @@
             </table>
             <div style=" height:369px; overflow:hidden; float:left;">
                 <table width="899" border="0" cellspacing="0" cellpadding="0" id="demo1">
-                    <tbody>
+                    <tbody id="huowu">
                         <tr>
                             <td width="100">南昌市</td>
                             <td width="100">赣州市</td>
                             <td width="299">化肥</td>
                             <td width="100">价格面议</td>
                             <td width="100">17秒前</td>
-                            <td width="100"><span><a href="freight%20details.html" target="_blank">查看</a></span></td>
-                        </tr>
-                        <tr>
-                            <td width="110">菏泽市</td>
-                            <td width="110">菏泽市</td>
-                            <td>纸箱</td>
-                            <td width="80">价格面议</td>
-                            <td width="110">21秒前</td>
-                            <td width="100"><span><a href="freight%20details.html" target="_blank">查看</a></span></td>
-                        </tr>
-                        <tr>
-                            <td width="110">咸宁市</td>
-                            <td width="110">郑州市</td>
-                            <td>菜</td>
-                            <td width="80">价格面议</td>
-                            <td width="110">27秒前</td>
-                            <td width="100"><span><a href="freight%20details.html" target="_blank">查看</a></span></td>
-                        </tr>
-                        <tr>
-                            <td width="110">菏泽市</td>
-                            <td width="110">咸宁市</td>
-                            <td>酒盒</td>
-                            <td width="80">价格面议</td>
-                            <td width="110">45秒前</td>
-                            <td width="100"><span><a href="freight%20details.html" target="_blank">查看</a></span></td>
-                        </tr>
-                        <tr>
-                            <td width="110">咸宁市</td>
-                            <td width="110">菏泽市</td>
-                            <td>菜</td>
-                            <td width="80">价格面议</td>
-                            <td width="110">47秒前</td>
-                            <td width="100"><span><a href="freight%20details.html" target="_blank">查看</a></span></td>
-                        </tr>
-                        <tr>
-                            <td width="110">咸宁市</td>
-                            <td width="110">洛阳市</td>
-                            <td>扫帚</td>
-                            <td width="80">价格面议</td>
-                            <td width="110">57秒前</td>
-                            <td width="100"><span><a href="freight%20details.html" target="_blank">查看</a></span></td>
-                        </tr>
-                        <tr>
-                            <td width="110">南京市</td>
-                            <td width="110">安庆市</td>
-                            <td>树苗</td>
-                            <td width="80">价格面议</td>
-                            <td width="110">1分钟前</td>
-                            <td width="100"><span><a href="freight%20details.html" target="_blank">查看</a></span></td>
-                        </tr>
-                        <tr>
-                            <td width="110">菏泽市</td>
-                            <td width="110">驻马店市</td>
-                            <td>板材30吨</td>
-                            <td width="80">价格面议</td>
-                            <td width="110">1分钟前</td>
-                            <td width="100"><span><a href="freight%20details.html" target="_blank">查看</a></span></td>
-                        </tr>
-                        <tr>
-                            <td width="110">咸宁市</td>
-                            <td width="110">郑州市</td>
-                            <td>棉纱</td>
-                            <td width="80">价格面议</td>
-                            <td width="110">1分钟前</td>
-                            <td width="100"><span><a href="freight%20details.html" target="_blank">查看</a></span></td>
-                        </tr>
-                        <tr>
-                            <td width="110">咸宁市</td>
-                            <td width="110">石家庄市</td>
-                            <td>棉纱</td>
-                            <td width="80">价格面议</td>
-                            <td width="110">1分钟前</td>
                             <td width="100"><span><a href="freight%20details.html" target="_blank">查看</a></span></td>
                         </tr>
                     </tbody>
@@ -298,6 +226,22 @@
     </div>
     <div class="footer_bottom">Copyright © 2012-2015 新广货运联盟 版权所有 Power by www.dwuliu.com   ICP备14059919号-1号 </div>
 </div>
-<!--尾部-结束--> 
+<!--尾部-结束-->
+<script>
+    $.post('goods/selectGoodsByContion',null,function(data){
+        var data1 = JSON.parse(data);
+        $(data1).each(function(){
+            var a ='<tr>\n' +
+                '                <td width="100">'+this.startCity+'</td>\n' +
+                '                <td width="100">'+this.endCity+'</td>\n' +
+                '                <td width="299">'+this.goodsName+'</td>\n' +
+                '                <td width="100">'+this.price+'</td>\n' +
+                '                <td width="100">'+this.createTime+'</td>\n' +
+                '            <td width="100"><span><a href="freight%20details.html" target="_blank">查看</a></span></td>\n' +
+                '            </tr>'
+            $("#huowu").append(a)
+        })
+    })
+</script>
 </body>
 </html>
